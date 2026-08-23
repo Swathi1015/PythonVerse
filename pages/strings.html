@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Strings | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">📝</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Strings</h1>
+<p>Learn how to store, access and manipulate text in Python.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is a String?</h2></div>
+<p>A string is a sequence of characters enclosed inside single quotes, double quotes or triple quotes.</p>
+
+<div class="code-box">
+<code>
+name = "Swathi"<br>
+language = 'Python'<br>
+message = """Hello Python!"""
+</code>
+</div>
+
+<p style="margin-top:20px;">Strings can contain letters, numbers, spaces and special characters.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔢</span><h2>String Indexing</h2></div>
+<p>Each character in a string has an index. Python starts indexing from <strong>0</strong>.</p>
+
+<div class="code-box">
+<code>
+word = "Python"<br><br>
+print(word[0])<br>
+print(word[1])<br>
+print(word[-1])
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>P &nbsp; y &nbsp; n</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>✂️</span><h2>String Slicing</h2></div>
+<p>Slicing is used to extract a part of a string.</p>
+
+<div class="code-box">
+<code>
+word = "Python"<br><br>
+print(word[0:3])<br>
+print(word[2:6])
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>Pyt</strong> and <strong>thon</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🛠️</span><h2>Useful String Methods</h2></div>
+
+<div class="use-grid">
+<div>🔠 <strong>upper()</strong><br>Converts to uppercase</div>
+<div>🔡 <strong>lower()</strong><br>Converts to lowercase</div>
+<div>✨ <strong>capitalize()</strong><br>Capitalizes first letter</div>
+<div>🔎 <strong>find()</strong><br>Finds a character/text</div>
+<div>🔄 <strong>replace()</strong><br>Replaces text</div>
+<div>📏 <strong>len()</strong><br>Finds string length</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Python Example</h2></div>
+
+<div class="code-box">
+<code>
+name = "python programming"<br><br>
+print(name.upper())<br>
+print(name.lower())<br>
+print(name.capitalize())<br>
+print(len(name))<br>
+print(name.replace("python","Python"))
+</code>
+</div>
+
+<button class="run-demo" onclick="showStringDemo()">▶ Run Example</button>
+<div id="string-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create a string containing your name and perform these operations:</p>
+
+<div class="task">
+1. Print the name in uppercase.<br>
+2. Print the name in lowercase.<br>
+3. Find the length of the name.<br>
+4. Print the first character.<br>
+5. Replace one character.
+</div>
+
+<textarea id="string-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkStringExercise()">Check Answer ✓</button>
+<div id="string-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which method converts a string into uppercase?</strong></p>
+
+<div class="quiz-options">
+<button onclick="stringQuiz(this,true)">upper()</button>
+<button onclick="stringQuiz(this,false)">lower()</button>
+<button onclick="stringQuiz(this,false)">replace()</button>
+</div>
+
+<div id="string-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="loops.html" class="back-btn">← Loops</a>
+<a href="lists.html" class="next-btn">Lists →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

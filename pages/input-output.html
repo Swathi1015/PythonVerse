@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Input & Output | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg"><div class="topic-orb orb1"></div><div class="topic-orb orb2"></div></div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">⌨️</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Input & Output</h1>
+<p>Learn how Python communicates with the user.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is Input?</h2></div>
+<p>Input means taking information from the user. Python provides the <strong>input()</strong> function to receive information from the keyboard.</p>
+
+<div class="code-box">
+<code>name = input("Enter your name: ")<br>print(name)</code>
+</div>
+
+<div class="visual-box">
+<div class="box-label">⌨️ User</div>
+<div class="arrow">⬇️</div>
+<div class="memory">🐍 Python Program</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🖥️</span><h2>What is Output?</h2></div>
+<p>Output means displaying information on the screen. Python uses the <strong>print()</strong> function to display output.</p>
+
+<div class="code-box">
+<code>print("Hello, Python!")<br>print(10 + 20)</code>
+</div>
+
+<button class="run-demo" onclick="showIODemo()">▶ Run Example</button>
+<div id="variable-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔄</span><h2>Input + Output Together</h2></div>
+
+<div class="code-box">
+<code>
+name = input("Enter your name: ")<br>
+print("Hello", name)
+</code>
+</div>
+
+<p style="margin-top:20px;">The user enters a value → Python stores it → <strong>print()</strong> displays the result.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⚠️</span><h2>Important Point</h2></div>
+
+<div class="rules">
+<div>💡 input() normally returns the user's value as a <strong>string</strong>.</div>
+<div>🔢 Use int() when you need an integer.</div>
+<div>🔣 Use float() when you need a decimal number.</div>
+</div>
+
+<div class="code-box">
+<code>
+age = int(input("Enter your age: "))<br>
+height = float(input("Enter your height: "))
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Mini Exercise</h2></div>
+
+<p>Write a program that asks the user for their:</p>
+
+<div class="task">
+1. Name<br>
+2. Age<br>
+3. Favourite programming language<br><br>
+Then print all three values.
+</div>
+
+<textarea id="answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkIOExercise()">Check Answer ✓</button>
+<div id="exercise-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which function is used to take input from the user?</strong></p>
+
+<div class="quiz-options">
+<button onclick="ioQuiz(this,false)">print()</button>
+<button onclick="ioQuiz(this,true)">input()</button>
+<button onclick="ioQuiz(this,false)">type()</button>
+</div>
+
+<div id="quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="data-types.html" class="back-btn">← Data Types</a>
+<a href="#" class="next-btn">Type Casting →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

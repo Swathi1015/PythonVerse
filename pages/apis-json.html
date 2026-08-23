@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>APIs & JSON | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🌐</div>
+<span class="topic-level">🔥 ADVANCED</span>
+<h1>APIs & JSON</h1>
+<p>Learn how Python applications communicate with other applications and exchange data using APIs and JSON.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is an API?</h2></div>
+<p>API stands for <strong>Application Programming Interface</strong>.</p>
+<p>An API allows two different software applications to communicate with each other and exchange data.</p>
+
+<div class="interview-box">
+<strong>🌍 Simple Example:</strong>
+<p>A weather application needs weather information. Instead of storing all weather data itself, it can request the data from a weather API.</p>
+</div>
+
+<div class="use-grid">
+<div>📱 App</div>
+<div>🌐 API</div>
+<div>🗄️ Server</div>
+<div>📊 Data</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔄</span><h2>How an API Works</h2></div>
+
+<div class="task">
+1️⃣ Python application sends a request<br><br>
+2️⃣ API receives the request<br><br>
+3️⃣ Server processes the request<br><br>
+4️⃣ Server sends a response<br><br>
+5️⃣ Python reads the response
+</div>
+
+<p style="margin-top:20px;"><strong>Request → API → Server → Response</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📦</span><h2>What is JSON?</h2></div>
+
+<p>JSON stands for <strong>JavaScript Object Notation</strong>.</p>
+
+<p>JSON is a lightweight format commonly used for exchanging data between applications.</p>
+
+<div class="code-box">
+<code>
+{<br>
+&nbsp;&nbsp;"name":"Swathi",<br>
+&nbsp;&nbsp;"age":22,<br>
+&nbsp;&nbsp;"branch":"CSE"<br>
+}
+</code>
+</div>
+
+<p style="margin-top:20px;">JSON looks similar to a Python dictionary, which makes it very convenient to work with in Python.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🆚</span><h2>Python Dictionary vs JSON</h2></div>
+
+<div class="comparison">
+<div>
+<strong>🐍 Python Dictionary</strong>
+<p>Python object</p>
+<p>Uses dict syntax</p>
+<p>Used inside Python</p>
+</div>
+
+<div>
+<strong>🌐 JSON</strong>
+<p>Data exchange format</p>
+<p>Used between applications</p>
+<p>Language independent</p>
+</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔧</span><h2>JSON Module in Python</h2></div>
+
+<p>Python provides the built-in <strong>json</strong> module to work with JSON data.</p>
+
+<div class="code-box">
+<code>
+import json
+</code>
+</div>
+
+<p style="margin-top:20px;">The two important operations are:</p>
+
+<div class="use-grid">
+<div>🔄 json.dumps()<br>Python → JSON</div>
+<div>🔄 json.loads()<br>JSON → Python</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📤</span><h2>json.dumps()</h2></div>
+
+<p><strong>dumps()</strong> converts a Python object into a JSON string.</p>
+
+<div class="code-box">
+<code>
+import json<br><br>
+student = {<br>
+&nbsp;&nbsp;"name":"Swathi",<br>
+&nbsp;&nbsp;"marks":90<br>
+}<br><br>
+data = json.dumps(student)<br>
+print(data)
+</code>
+</div>
+
+<div class="interview-box">
+<strong>Remember:</strong>
+<p>dumps = Python object → JSON string</p>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📥</span><h2>json.loads()</h2></div>
+
+<p><strong>loads()</strong> converts a JSON string into a Python object.</p>
+
+<div class="code-box">
+<code>
+import json<br><br>
+data = '{"name":"Swathi","marks":90}'<br><br>
+student = json.loads(data)<br>
+print(student["name"])
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>Swathi</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🌐</span><h2>Calling an API with Python</h2></div>
+
+<p>Python can use the <strong>requests</strong> library to send HTTP requests to APIs.</p>
+
+<div class="code-box">
+<code>
+import requests<br><br>
+response = requests.get("https://example.com/api")<br><br>
+print(response.status_code)<br>
+print(response.json())
+</code>
+</div>
+
+<div class="interview-box">
+<strong>💡 Important:</strong>
+<p>requests.get() sends a GET request. response.json() converts a JSON response into a Python object.</p>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📡</span><h2>HTTP Methods</h2></div>
+
+<div class="use-grid">
+<div>🔍 GET<br>Retrieve data</div>
+<div>➕ POST<br>Send new data</div>
+<div>✏️ PUT<br>Update data</div>
+<div>🗑️ DELETE<br>Remove data</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📊</span><h2>API Response & Status Codes</h2></div>
+
+<div class="use-grid">
+<div>✅ 200<br>Success</div>
+<div>➕ 201<br>Created</div>
+<div>❌ 400<br>Bad Request</div>
+<div>🚫 401<br>Unauthorized</div>
+<div>🔍 404<br>Not Found</div>
+<div>💥 500<br>Server Error</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔐</span><h2>API Request Example</h2></div>
+
+<div class="code-box">
+<code>
+import requests<br><br>
+url = "https://example.com/api/students"<br><br>
+response = requests.get(url)<br><br>
+if response.status_code == 200:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data = response.json()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(data)<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Request failed")
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💼</span><h2>Real-Time Uses of APIs</h2></div>
+
+<div class="use-grid">
+<div>🌦️ Weather Apps</div>
+<div>💳 Payment Systems</div>
+<div>🛒 E-Commerce</div>
+<div>📍 Maps</div>
+<div>🔐 Login Systems</div>
+<div>📱 Mobile Applications</div>
+<div>🤖 AI Applications</div>
+<div>📊 Data Applications</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Write Python code that:</p>
+
+<div class="task">
+1. Imports the json module.<br>
+2. Creates a Python dictionary containing name and age.<br>
+3. Converts it into JSON using dumps().<br>
+4. Prints the JSON data.
+</div>
+
+<textarea id="api-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkAPIExercise()">Check Answer ✓</button>
+
+<div id="api-result"></div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧪</span><h2>API Coding Exercise</h2></div>
+
+<p>Complete the missing code:</p>
+
+<div class="code-box">
+<code>
+import requests<br><br>
+response = requests.________("https://example.com/api")<br><br>
+print(response.status_code)
+</code>
+</div>
+
+<input type="text" id="api-method-answer" placeholder="Type the method">
+
+<button class="check-btn" onclick="checkAPIMethod()">Check Answer ✓</button>
+
+<div id="api-method-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quiz 1 — API</h2></div>
+
+<p><strong>What does API stand for?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz1(this,true)">Application Programming Interface</button>
+<button onclick="apiQuiz1(this,false)">Application Python Interface</button>
+<button onclick="apiQuiz1(this,false)">Advanced Programming Internet</button>
+<button onclick="apiQuiz1(this,false)">Application Processing Input</button>
+</div>
+
+<div id="api-quiz1"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>📦</span><h2>Quiz 2 — JSON</h2></div>
+
+<p><strong>What does JSON stand for?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz2(this,false)">Java Source Object Notation</button>
+<button onclick="apiQuiz2(this,true)">JavaScript Object Notation</button>
+<button onclick="apiQuiz2(this,false)">Java Standard Object Network</button>
+<button onclick="apiQuiz2(this,false)">JSON Standard Object Name</button>
+</div>
+
+<div id="api-quiz2"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🔄</span><h2>Quiz 3 — JSON Conversion</h2></div>
+
+<p><strong>Which function converts a Python object into a JSON string?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz3(this,false)">json.loads()</button>
+<button onclick="apiQuiz3(this,true)">json.dumps()</button>
+<button onclick="apiQuiz3(this,false)">json.parse()</button>
+<button onclick="apiQuiz3(this,false)">json.convert()</button>
+</div>
+
+<div id="api-quiz3"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>📥</span><h2>Quiz 4 — JSON Loading</h2></div>
+
+<p><strong>Which function converts a JSON string into a Python object?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz4(this,true)">json.loads()</button>
+<button onclick="apiQuiz4(this,false)">json.dumps()</button>
+<button onclick="apiQuiz4(this,false)">json.parse()</button>
+<button onclick="apiQuiz4(this,false)">json.read()</button>
+</div>
+
+<div id="api-quiz4"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🌐</span><h2>Quiz 5 — HTTP</h2></div>
+
+<p><strong>Which HTTP method is normally used to retrieve data?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz5(this,true)">GET</button>
+<button onclick="apiQuiz5(this,false)">POST</button>
+<button onclick="apiQuiz5(this,false)">DELETE</button>
+<button onclick="apiQuiz5(this,false)">PATCH</button>
+</div>
+
+<div id="api-quiz5"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>➕</span><h2>Quiz 6 — POST</h2></div>
+
+<p><strong>Which HTTP method is commonly used to send new data to a server?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz6(this,false)">GET</button>
+<button onclick="apiQuiz6(this,true)">POST</button>
+<button onclick="apiQuiz6(this,false)">DELETE</button>
+<button onclick="apiQuiz6(this,false)">HEAD</button>
+</div>
+
+<div id="api-quiz6"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>📊</span><h2>Quiz 7 — Status Code</h2></div>
+
+<p><strong>What does HTTP status code 404 normally indicate?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz7(this,false)">Success</button>
+<button onclick="apiQuiz7(this,false)">Server Error</button>
+<button onclick="apiQuiz7(this,true)">Not Found</button>
+<button onclick="apiQuiz7(this,false)">Unauthorized</button>
+</div>
+
+<div id="api-quiz7"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🐍</span><h2>Quiz 8 — Python API</h2></div>
+
+<p><strong>Which Python library is commonly used to send HTTP requests?</strong></p>
+
+<div class="quiz-options">
+<button onclick="apiQuiz8(this,false)">random</button>
+<button onclick="apiQuiz8(this,true)">requests</button>
+<button onclick="apiQuiz8(this,false)">math</button>
+<button onclick="apiQuiz8(this,false)">os</button>
+</div>
+
+<div id="api-quiz8"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="database-connectivity.html" class="back-btn">← Database</a>
+<a href="mnc-interview.html" class="next-btn">MNC Interview →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Testing & Debugging | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🧪</div>
+<span class="topic-level">🔥 IMPORTANT</span>
+<h1>Testing & Debugging</h1>
+<p>Learn how to find errors, test your Python programs and fix bugs confidently.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is Testing?</h2></div>
+<p>Testing means checking whether a program works correctly for different inputs and produces the expected output.</p>
+
+<div class="interview-box">
+<strong>Example:</strong>
+<p>If a function should add two numbers, we test it with different values to make sure it gives the correct result.</p>
+</div>
+
+<div class="code-box">
+<code>
+def add(a,b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a+b<br><br>
+print(add(5,3))
+</code>
+</div>
+
+<p style="margin-top:20px;">Expected output: <strong>8</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🐛</span><h2>What is Debugging?</h2></div>
+<p>Debugging is the process of finding and fixing errors or bugs in a program.</p>
+
+<div class="task">
+Write Code → Run Program → Error/Unexpected Output → Find Bug → Fix Bug → Test Again
+</div>
+
+<div class="interview-box">
+<strong>💡 Simple Meaning:</strong>
+<p>Testing finds that something is wrong. Debugging helps us find out why it is wrong and fix it.</p>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⚠️</span><h2>Types of Errors in Python</h2></div>
+
+<div class="use-grid">
+<div>✍️ Syntax Error</div>
+<div>🏃 Runtime Error</div>
+<div>🧠 Logical Error</div>
+</div>
+
+<p style="margin-top:25px;"><strong>Syntax Error:</strong> Python syntax is written incorrectly.</p>
+
+<div class="code-box">
+<code>
+if age &gt;= 18<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Eligible")
+</code>
+</div>
+
+<p style="margin-top:15px;">The colon <strong>:</strong> is missing.</p>
+
+<p style="margin-top:25px;"><strong>Runtime Error:</strong> The program starts running but an error occurs during execution.</p>
+
+<div class="code-box">
+<code>
+number = 10<br>
+print(number / 0)
+</code>
+</div>
+
+<p style="margin-top:15px;">This causes <strong>ZeroDivisionError</strong>.</p>
+
+<p style="margin-top:25px;"><strong>Logical Error:</strong> Program runs without crashing, but gives the wrong result.</p>
+
+<div class="code-box">
+<code>
+a = 10<br>
+b = 5<br>
+print(a-b)
+</code>
+</div>
+
+<p style="margin-top:15px;">If the programmer intended addition, the code runs but gives the wrong answer.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔍</span><h2>Reading Error Messages</h2></div>
+
+<p>Python error messages usually provide useful information about where and why an error occurred.</p>
+
+<div class="code-box">
+<code>
+Traceback (most recent call last):<br>
+&nbsp;&nbsp;File "program.py", line 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(10 / 0)<br>
+ZeroDivisionError: division by zero
+</code>
+</div>
+
+<div class="task">
+🔹 File name tells where the error occurred.<br><br>
+🔹 Line number tells which line caused the problem.<br><br>
+🔹 Error type tells what kind of error occurred.<br><br>
+🔹 Error message gives additional information.
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🛠️</span><h2>Common Python Errors</h2></div>
+
+<div class="use-grid">
+<div>❌ NameError<br>Variable not defined</div>
+<div>❌ TypeError<br>Wrong data type operation</div>
+<div>❌ ValueError<br>Invalid value</div>
+<div>❌ IndexError<br>Invalid list index</div>
+<div>❌ KeyError<br>Missing dictionary key</div>
+<div>❌ ZeroDivisionError<br>Division by zero</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧯</span><h2>Exception Handling</h2></div>
+
+<p>Python provides <strong>try</strong> and <strong>except</strong> to handle runtime errors without crashing the entire program.</p>
+
+<div class="code-box">
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number = int(input("Enter number: "))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(10 / number)<br>
+except ZeroDivisionError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Cannot divide by zero")
+</code>
+</div>
+
+<div class="interview-box">
+<strong>💡 Remember:</strong>
+<p><strong>try</strong> contains risky code. <strong>except</strong> handles the error.</p>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔄</span><h2>try, except, else & finally</h2></div>
+
+<div class="code-box">
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number = int(input("Enter number: "))<br>
+except ValueError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Invalid input")<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Valid input")<br>
+finally:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Program finished")
+</code>
+</div>
+
+<div class="use-grid">
+<div>🧪 try<br>Test risky code</div>
+<div>🚨 except<br>Handle error</div>
+<div>✅ else<br>Runs if no error</div>
+<div>🔚 finally<br>Runs at the end</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📝</span><h2>Assertions</h2></div>
+
+<p>An assertion is used to check whether a condition is true while developing or testing a program.</p>
+
+<div class="code-box">
+<code>
+age = 20<br>
+assert age &gt;= 18<br>
+print("Eligible")
+</code>
+</div>
+
+<p style="margin-top:20px;">If the condition is false, Python raises an <strong>AssertionError</strong>.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧪</span><h2>Unit Testing</h2></div>
+
+<p>Unit testing means testing small individual parts of a program, such as functions.</p>
+
+<div class="code-box">
+<code>
+import unittest<br><br>
+def add(a,b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a+b<br><br>
+class TestAdd(unittest.TestCase):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def test_add(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.assertEqual(add(2,3),5)<br><br>
+unittest.main()
+</code>
+</div>
+
+<div class="interview-box">
+<strong>💡 Interview Tip:</strong>
+<p>Know the basic idea of unit testing and the purpose of <strong>unittest</strong>. You don't need to memorize every method.</p>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔧</span><h2>Debugging Techniques</h2></div>
+
+<div class="question-list">
+<div>1️⃣ Read the error message carefully</div>
+<div>2️⃣ Check the line number</div>
+<div>3️⃣ Print variable values</div>
+<div>4️⃣ Check input values</div>
+<div>5️⃣ Test small parts of the program</div>
+<div>6️⃣ Use breakpoints in VS Code</div>
+<div>7️⃣ Check assumptions</div>
+<div>8️⃣ Test edge cases</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔎</span><h2>Debugging with print()</h2></div>
+
+<div class="code-box">
+<code>
+def calculate(a,b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("a =",a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("b =",b)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a+b<br><br>
+print(calculate(10,20))
+</code>
+</div>
+
+<p style="margin-top:20px;">Printing intermediate values helps us understand what is happening inside the program.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧠</span><h2>Edge Case Testing</h2></div>
+
+<p>Edge cases are unusual or boundary inputs that can reveal bugs.</p>
+
+<div class="task">
+For a program that calculates division, test:<br><br>
+✅ Normal number<br>
+⚠️ Zero<br>
+⚠️ Negative number<br>
+⚠️ Very large number<br>
+⚠️ Invalid input
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Find and fix the error in this program:</p>
+
+<div class="code-box">
+<code>
+number = input("Enter a number: ")<br>
+result = number + 10<br>
+print(result)
+</code>
+</div>
+
+<p style="margin-top:20px;">💡 Hint: What data type does <strong>input()</strong> return?</p>
+
+<textarea id="debug-answer" placeholder="Write the corrected code here..."></textarea>
+
+<button class="check-btn" onclick="checkDebugExercise()">Check Answer ✓</button>
+
+<div id="debug-result"></div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🐛</span><h2>Debugging Challenge</h2></div>
+
+<p>What type of error is this?</p>
+
+<div class="code-box">
+<code>
+numbers = [10,20,30]<br>
+print(numbers[5])
+</code>
+</div>
+
+<div class="quiz-options">
+<button onclick="debugChallenge(this,false)">SyntaxError</button>
+<button onclick="debugChallenge(this,true)">IndexError</button>
+<button onclick="debugChallenge(this,false)">NameError</button>
+<button onclick="debugChallenge(this,false)">TypeError</button>
+</div>
+
+<div id="debug-challenge-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quiz 1 — Testing</h2></div>
+<p><strong>What is the main purpose of testing?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz1(this,true)">Check whether the program works correctly</button>
+<button onclick="testingQuiz1(this,false)">Make the code longer</button>
+<button onclick="testingQuiz1(this,false)">Delete the program</button>
+<button onclick="testingQuiz1(this,false)">Change the computer</button>
+</div>
+<div id="testing-quiz1"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🐛</span><h2>Quiz 2 — Debugging</h2></div>
+<p><strong>What does debugging mean?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz2(this,false)">Writing comments</button>
+<button onclick="testingQuiz2(this,true)">Finding and fixing bugs</button>
+<button onclick="testingQuiz2(this,false)">Installing Python</button>
+<button onclick="testingQuiz2(this,false)">Creating a database</button>
+</div>
+<div id="testing-quiz2"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>⚠️</span><h2>Quiz 3 — Error Types</h2></div>
+<p><strong>Which error occurs when Python syntax is incorrect?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz3(this,true)">SyntaxError</button>
+<button onclick="testingQuiz3(this,false)">IndexError</button>
+<button onclick="testingQuiz3(this,false)">ValueError</button>
+<button onclick="testingQuiz3(this,false)">KeyError</button>
+</div>
+<div id="testing-quiz3"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🚨</span><h2>Quiz 4 — Runtime Error</h2></div>
+<p><strong>Which error occurs when you divide a number by zero?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz4(this,false)">TypeError</button>
+<button onclick="testingQuiz4(this,true)">ZeroDivisionError</button>
+<button onclick="testingQuiz4(this,false)">NameError</button>
+<button onclick="testingQuiz4(this,false)">SyntaxError</button>
+</div>
+<div id="testing-quiz4"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧯</span><h2>Quiz 5 — Exception Handling</h2></div>
+<p><strong>Which keyword is used to handle an exception?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz5(this,false)">try</button>
+<button onclick="testingQuiz5(this,true)">except</button>
+<button onclick="testingQuiz5(this,false)">error</button>
+<button onclick="testingQuiz5(this,false)">catcher</button>
+</div>
+<div id="testing-quiz5"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🔚</span><h2>Quiz 6 — Finally</h2></div>
+<p><strong>Which block normally executes whether an exception occurs or not?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz6(this,false)">try</button>
+<button onclick="testingQuiz6(this,false)">except</button>
+<button onclick="testingQuiz6(this,true)">finally</button>
+<button onclick="testingQuiz6(this,false)">error</button>
+</div>
+<div id="testing-quiz6"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧪</span><h2>Quiz 7 — Unit Testing</h2></div>
+<p><strong>What does unit testing test?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz7(this,true)">Small individual parts of a program</button>
+<button onclick="testingQuiz7(this,false)">Only the computer hardware</button>
+<button onclick="testingQuiz7(this,false)">Internet speed</button>
+<button onclick="testingQuiz7(this,false)">Python installation</button>
+</div>
+<div id="testing-quiz7"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🔎</span><h2>Quiz 8 — Edge Cases</h2></div>
+<p><strong>Why should we test edge cases?</strong></p>
+<div class="quiz-options">
+<button onclick="testingQuiz8(this,false)">To make code colorful</button>
+<button onclick="testingQuiz8(this,true)">To find bugs with unusual or boundary inputs</button>
+<button onclick="testingQuiz8(this,false)">To remove Python</button>
+<button onclick="testingQuiz8(this,false)">To increase file size</button>
+</div>
+<div id="testing-quiz8"></div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔥</span><h2>Testing & Debugging Checklist</h2></div>
+<div class="use-grid">
+<div>✅ Test normal inputs</div>
+<div>⚠️ Test edge cases</div>
+<div>🐛 Read error messages</div>
+<div>🔍 Check variables</div>
+<div>🧪 Test functions</div>
+<div>🛠️ Fix and test again</div>
+</div>
+</section>
+
+<div class="topic-navigation">
+<a href="apis-json.html" class="back-btn">← APIs & JSON</a>
+<a href="projects.html" class="next-btn">Projects →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

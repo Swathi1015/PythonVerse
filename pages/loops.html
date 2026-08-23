@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Loops | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🔁</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Loops</h1>
+<p>Learn how to repeat a block of code easily and efficiently.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is a Loop?</h2></div>
+<p>A loop allows us to execute the same block of code multiple times without writing the same code again and again.</p>
+
+<div class="example-row">
+<div class="example-item">🐍<strong>Start</strong><span>Python</span></div>
+<div class="example-arrow">🔄</div>
+<div class="example-item">📋<strong>Repeat</strong><span>Task</span></div>
+<div class="example-arrow">🔄</div>
+<div class="example-item">🏁<strong>Stop</strong><span>Condition</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>1️⃣</span><h2>for Loop</h2></div>
+<p>A <strong>for loop</strong> is used to repeat code for each item in a sequence.</p>
+
+<div class="code-box">
+<code>
+for i in range(5):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(i)
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>0 1 2 3 4</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>2️⃣</span><h2>while Loop</h2></div>
+<p>A <strong>while loop</strong> repeats as long as its condition is True.</p>
+
+<div class="code-box">
+<code>
+i = 1<br><br>
+while i &lt;= 5:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;i += 1
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>1 2 3 4 5</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔢</span><h2>range()</h2></div>
+<p>The <strong>range()</strong> function generates a sequence of numbers, commonly used with for loops.</p>
+
+<div class="code-box">
+<code>
+range(5) → 0, 1, 2, 3, 4<br>
+range(1, 6) → 1, 2, 3, 4, 5
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🛑</span><h2>break</h2></div>
+<p><strong>break</strong> immediately stops the loop.</p>
+
+<div class="code-box">
+<code>
+for i in range(10):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if i == 5:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(i)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⏭️</span><h2>continue</h2></div>
+<p><strong>continue</strong> skips the current iteration and moves to the next one.</p>
+
+<div class="code-box">
+<code>
+for i in range(5):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if i == 2:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(i)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Real-Time Example</h2></div>
+<p>Suppose an online shopping application wants to display all products in a cart.</p>
+
+<div class="code-box">
+<code>
+products = ["Laptop","Phone","Mouse"]<br><br>
+for product in products:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(product)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+<p>Write Python programs to:</p>
+
+<div class="task">
+1. Print numbers from 1 to 10 using a for loop.<br>
+2. Print even numbers from 1 to 20.<br>
+3. Use a while loop to print 1 to 5.<br>
+4. Use break to stop a loop at 5.
+</div>
+
+<textarea id="loop-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkLoopExercise()">Check Answer ✓</button>
+<div id="loop-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which loop is commonly used when we know the number of repetitions?</strong></p>
+
+<div class="quiz-options">
+<button onclick="loopQuiz(this,true)">for loop</button>
+<button onclick="loopQuiz(this,false)">while loop</button>
+<button onclick="loopQuiz(this,false)">if statement</button>
+</div>
+
+<div id="loop-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="decision-making.html" class="back-btn">← Decision Making</a>
+<a href="strings.html" class="next-btn">Strings →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

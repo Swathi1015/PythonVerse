@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Python Interview Questions | For You Python</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<div class="topic-bg">
+    <div class="topic-orb orb1"></div>
+    <div class="topic-orb orb2"></div>
+</div>
+
+<header>
+
+<div class="logo">
+🐍 For You Python
+</div>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+
+</header>
+
+
+<main class="topic-page">
+
+
+<!-- HERO -->
+
+<section class="topic-hero">
+
+<div class="topic-icon">💼</div>
+
+<span class="topic-level">
+🔥 MNC INTERVIEW PREPARATION
+</span>
+
+<h1>
+Python Interview Questions
+</h1>
+
+<p>
+Prepare the most important Python interview questions with simple explanations,
+examples and interview-ready answers.
+</p>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🎯</span>
+<h2>How to Answer an Interview Question</h2>
+</div>
+
+<div class="task">
+
+🧠 Understand the question<br><br>
+
+📖 Give a clear definition<br><br>
+
+💡 Explain with a simple example<br><br>
+
+💻 Show code when required<br><br>
+
+🎯 Mention a real-world use
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 1 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🐍</span>
+<h2>1. What is Python?</h2>
+</div>
+
+<div class="interview-box">
+
+<strong>💡 Interview Answer:</strong>
+
+<p>
+Python is a high-level, interpreted, general-purpose programming language
+known for its simple and readable syntax. It is widely used in web development,
+automation, data science, artificial intelligence and machine learning.
+</p>
+
+</div>
+
+<div class="code-box">
+
+<code>
+print("Hello Python")
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 2 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>⭐</span>
+<h2>2. Why is Python popular?</h2>
+</div>
+
+<div class="question-list">
+
+<div>✅ Simple and readable syntax</div>
+<div>✅ Large standard library</div>
+<div>✅ Huge community support</div>
+<div>✅ Cross-platform</div>
+<div>✅ Supports multiple programming paradigms</div>
+<div>✅ Used in AI, ML, Web Development and Automation</div>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 3 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>📦</span>
+<h2>3. What are Python data types?</h2>
+</div>
+
+<div class="use-grid">
+
+<div>🔢 int</div>
+<div>🔢 float</div>
+<div>🔤 str</div>
+<div>✅ bool</div>
+<div>📋 list</div>
+<div>📦 tuple</div>
+<div>🧩 set</div>
+<div>📖 dict</div>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 4 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🆚</span>
+<h2>4. List vs Tuple?</h2>
+</div>
+
+<div class="comparison">
+
+<div>
+
+<strong>📋 List</strong>
+
+<p>Mutable</p>
+<p>Uses [ ]</p>
+<p>Can be modified</p>
+
+</div>
+
+<div>
+
+<strong>📦 Tuple</strong>
+
+<p>Immutable</p>
+<p>Uses ( )</p>
+<p>Cannot be modified</p>
+
+</div>
+
+</div>
+
+<div class="interview-box">
+
+<strong>🎯 Interview Answer:</strong>
+
+<p>
+A list is mutable, whereas a tuple is immutable.
+Therefore, list elements can be changed after creation,
+while tuple elements cannot be changed.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 5 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🔐</span>
+<h2>5. Mutable vs Immutable?</h2>
+</div>
+
+<p>
+Mutable objects can be changed after creation.
+Immutable objects cannot be changed after creation.
+</p>
+
+<div class="comparison">
+
+<div>
+
+<strong>Mutable</strong>
+
+<p>List</p>
+<p>Set</p>
+<p>Dictionary</p>
+
+</div>
+
+<div>
+
+<strong>Immutable</strong>
+
+<p>int</p>
+<p>float</p>
+<p>string</p>
+<p>tuple</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 6 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>⚖️</span>
+<h2>6. Difference between == and is?</h2>
+</div>
+
+<div class="interview-box">
+
+<strong>==</strong>
+
+<p>
+Checks whether two objects have equal values.
+</p>
+
+<br>
+
+<strong>is</strong>
+
+<p>
+Checks whether two variables refer to the same object.
+</p>
+
+</div>
+
+<div class="code-box">
+
+<code>
+a = [1,2,3]<br>
+b = [1,2,3]<br><br>
+
+print(a == b)<br>
+print(a is b)
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 7 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🔄</span>
+<h2>7. What is a function?</h2>
+</div>
+
+<p>
+A function is a reusable block of code designed to perform a specific task.
+</p>
+
+<div class="code-box">
+
+<code>
+def add(a,b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a+b<br><br>
+
+print(add(10,20))
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 8 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🔁</span>
+<h2>8. What is recursion?</h2>
+</div>
+
+<p>
+Recursion is a technique where a function calls itself until a base condition
+is reached.
+</p>
+
+<div class="code-box">
+
+<code>
+def factorial(n):<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;if n == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;return n * factorial(n-1)
+
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 9 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>📦</span>
+<h2>9. What are *args and **kwargs?</h2>
+</div>
+
+<div class="interview-box">
+
+<strong>*args</strong>
+
+<p>
+Allows a function to accept multiple positional arguments.
+</p>
+
+<strong>**kwargs</strong>
+
+<p>
+Allows a function to accept multiple keyword arguments.
+</p>
+
+</div>
+
+<div class="code-box">
+
+<code>
+def demo(*args, **kwargs):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(args)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(kwargs)
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 10 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>⚡</span>
+<h2>10. What is a Lambda function?</h2>
+</div>
+
+<p>
+A lambda function is a small anonymous function written using the
+<strong>lambda</strong> keyword.
+</p>
+
+<div class="code-box">
+
+<code>
+square = lambda x: x*x<br><br>
+print(square(5))
+</code>
+
+</div>
+
+<p style="margin-top:20px;">
+Output: <strong>25</strong>
+</p>
+
+</section>
+
+
+<!-- QUESTION 11 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🏛️</span>
+<h2>11. What is OOP?</h2>
+</div>
+
+<p>
+Object-Oriented Programming organizes programs using classes and objects.
+</p>
+
+<div class="use-grid">
+
+<div>🔒 Encapsulation</div>
+<div>🧬 Inheritance</div>
+<div>🔄 Polymorphism</div>
+<div>🎭 Abstraction</div>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 12 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🏗️</span>
+<h2>12. What is a class and object?</h2>
+</div>
+
+<p>
+A class is a blueprint for creating objects.
+An object is an instance of a class.
+</p>
+
+<div class="code-box">
+
+<code>
+class Student:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pass<br><br>
+
+student1 = Student()
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 13 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🧬</span>
+<h2>13. What is inheritance?</h2>
+</div>
+
+<p>
+Inheritance allows one class to acquire properties and methods of another class.
+</p>
+
+<div class="code-box">
+
+<code>
+class Parent:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def show(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Parent")<br><br>
+
+class Child(Parent):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pass
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 14 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🔄</span>
+<h2>14. What is polymorphism?</h2>
+</div>
+
+<p>
+Polymorphism means the same interface or method name can behave differently
+depending on the object or context.
+</p>
+
+</section>
+
+
+<!-- QUESTION 15 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🧯</span>
+<h2>15. What is exception handling?</h2>
+</div>
+
+<p>
+Exception handling allows a program to handle runtime errors without
+unexpectedly terminating.
+</p>
+
+<div class="code-box">
+
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number = int(input())<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(10 / number)<br><br>
+
+except ZeroDivisionError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Cannot divide by zero")
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 16 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🚀</span>
+<h2>16. What is a generator?</h2>
+</div>
+
+<p>
+A generator produces values one at a time using the <strong>yield</strong>
+keyword.
+</p>
+
+<div class="code-box">
+
+<code>
+def numbers():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;yield 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;yield 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;yield 3
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 17 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🔧</span>
+<h2>17. What is an iterator?</h2>
+</div>
+
+<p>
+An iterator is an object that allows us to access elements one at a time.
+Python uses <strong>iter()</strong> and <strong>next()</strong> to work with iterators.
+</p>
+
+<div class="code-box">
+
+<code>
+numbers = [10,20,30]<br><br>
+
+it = iter(numbers)<br><br>
+
+print(next(it))<br>
+print(next(it))
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 18 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>✨</span>
+<h2>18. What is a decorator?</h2>
+</div>
+
+<p>
+A decorator is a function that modifies or extends the behavior of another
+function without changing its original code.
+</p>
+
+<div class="code-box">
+
+<code>
+def decorator(func):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def wrapper():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Before function")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return wrapper
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 19 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>📁</span>
+<h2>19. What is file handling?</h2>
+</div>
+
+<p>
+File handling allows Python programs to create, read, write and modify files.
+</p>
+
+<div class="code-box">
+
+<code>
+file = open("data.txt","r")<br>
+data = file.read()<br>
+print(data)<br>
+file.close()
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 20 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🗄️</span>
+<h2>20. What is database connectivity?</h2>
+</div>
+
+<p>
+Database connectivity allows Python applications to communicate with databases
+to store, retrieve, update and delete data.
+</p>
+
+<div class="use-grid">
+
+<div>➕ INSERT</div>
+<div>🔍 SELECT</div>
+<div>✏️ UPDATE</div>
+<div>🗑️ DELETE</div>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 21 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🌐</span>
+<h2>21. What is an API?</h2>
+</div>
+
+<p>
+An API allows different software applications to communicate and exchange data.
+</p>
+
+<div class="task">
+
+Application → Request → API → Server → Response → Application
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 22 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>📦</span>
+<h2>22. What is JSON?</h2>
+</div>
+
+<p>
+JSON is a lightweight data format commonly used for exchanging data between
+applications.
+</p>
+
+<div class="code-box">
+
+<code>
+{<br>
+&nbsp;&nbsp;"name":"Swathi",<br>
+&nbsp;&nbsp;"age":22<br>
+}
+</code>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 23 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>⏱️</span>
+<h2>23. What is time complexity?</h2>
+</div>
+
+<p>
+Time complexity describes how the running time of an algorithm grows as the
+input size increases.
+</p>
+
+<div class="use-grid">
+
+<div>🟢 O(1)<br>Constant</div>
+<div>🔵 O(n)<br>Linear</div>
+<div>🟡 O(n²)<br>Quadratic</div>
+<div>🔴 O(log n)<br>Logarithmic</div>
+
+</div>
+
+</section>
+
+
+<!-- QUESTION 24 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🧪</span>
+<h2>24. What is unit testing?</h2>
+</div>
+
+<p>
+Unit testing tests small individual parts of a program, usually functions,
+to verify that they behave correctly.
+</p>
+
+</section>
+
+
+<!-- QUESTION 25 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🐛</span>
+<h2>25. What is debugging?</h2>
+</div>
+
+<p>
+Debugging is the process of identifying and fixing errors or bugs in a program.
+</p>
+
+<div class="task">
+
+Write Code → Run → Find Error → Understand Error → Fix → Test Again
+
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>⚡</span>
+<h2>Quick Interview Revision</h2>
+</div>
+
+<div class="question-list">
+
+<div>🐍 Python → High-level interpreted language</div>
+<div>📋 List → Mutable collection</div>
+<div>📦 Tuple → Immutable collection</div>
+<div>📖 Dictionary → Key-value pairs</div>
+<div>🔄 Recursion → Function calls itself</div>
+<div>⚡ Lambda → Anonymous function</div>
+<div>🏛️ OOP → Classes and objects</div>
+<div>🧬 Inheritance → Reuse properties/methods</div>
+<div>🚀 Generator → Uses yield</div>
+<div>✨ Decorator → Modifies function behavior</div>
+<div>🌐 API → Application communication</div>
+<div>📦 JSON → Data exchange format</div>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ 1 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>🧩</span>
+<h2>Quiz 1</h2>
+</div>
+
+<p>
+<strong>
+Which keyword defines a function in Python?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz1(this,false)">function</button>
+<button onclick="interviewQuiz1(this,true)">def</button>
+<button onclick="interviewQuiz1(this,false)">fun</button>
+<button onclick="interviewQuiz1(this,false)">define</button>
+
+</div>
+
+<div id="interview-quiz1"></div>
+
+</section>
+
+
+<!-- QUIZ 2 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>📦</span>
+<h2>Quiz 2</h2>
+</div>
+
+<p>
+<strong>
+Which collection is immutable?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz2(this,false)">List</button>
+<button onclick="interviewQuiz2(this,true)">Tuple</button>
+<button onclick="interviewQuiz2(this,false)">Set</button>
+<button onclick="interviewQuiz2(this,false)">Dictionary</button>
+
+</div>
+
+<div id="interview-quiz2"></div>
+
+</section>
+
+
+<!-- QUIZ 3 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>🔄</span>
+<h2>Quiz 3</h2>
+</div>
+
+<p>
+<strong>
+Which keyword is used by a generator?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz3(this,false)">return</button>
+<button onclick="interviewQuiz3(this,true)">yield</button>
+<button onclick="interviewQuiz3(this,false)">generate</button>
+<button onclick="interviewQuiz3(this,false)">next</button>
+
+</div>
+
+<div id="interview-quiz3"></div>
+
+</section>
+
+
+<!-- QUIZ 4 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>🏛️</span>
+<h2>Quiz 4</h2>
+</div>
+
+<p>
+<strong>
+Which OOP concept allows one class to acquire properties of another?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz4(this,false)">Encapsulation</button>
+<button onclick="interviewQuiz4(this,true)">Inheritance</button>
+<button onclick="interviewQuiz4(this,false)">Abstraction</button>
+<button onclick="interviewQuiz4(this,false)">Iteration</button>
+
+</div>
+
+<div id="interview-quiz4"></div>
+
+</section>
+
+
+<!-- QUIZ 5 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>🌐</span>
+<h2>Quiz 5</h2>
+</div>
+
+<p>
+<strong>
+What does API stand for?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz5(this,true)">
+Application Programming Interface
+</button>
+
+<button onclick="interviewQuiz5(this,false)">
+Application Python Interface
+</button>
+
+<button onclick="interviewQuiz5(this,false)">
+Advanced Programming Internet
+</button>
+
+<button onclick="interviewQuiz5(this,false)">
+Application Processing Input
+</button>
+
+</div>
+
+<div id="interview-quiz5"></div>
+
+</section>
+
+
+<!-- QUIZ 6 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>📦</span>
+<h2>Quiz 6</h2>
+</div>
+
+<p>
+<strong>
+Which function converts a Python object into a JSON string?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz6(this,false)">json.loads()</button>
+<button onclick="interviewQuiz6(this,true)">json.dumps()</button>
+<button onclick="interviewQuiz6(this,false)">json.parse()</button>
+<button onclick="interviewQuiz6(this,false)">json.convert()</button>
+
+</div>
+
+<div id="interview-quiz6"></div>
+
+</section>
+
+
+<!-- QUIZ 7 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>🐛</span>
+<h2>Quiz 7</h2>
+</div>
+
+<p>
+<strong>
+What is debugging?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz7(this,false)">
+Writing a program
+</button>
+
+<button onclick="interviewQuiz7(this,true)">
+Finding and fixing bugs
+</button>
+
+<button onclick="interviewQuiz7(this,false)">
+Installing Python
+</button>
+
+<button onclick="interviewQuiz7(this,false)">
+Creating a database
+</button>
+
+</div>
+
+<div id="interview-quiz7"></div>
+
+</section>
+
+
+<!-- QUIZ 8 -->
+
+<section class="learning-card quiz-card">
+
+<div class="section-title">
+<span>🧠</span>
+<h2>Quiz 8</h2>
+</div>
+
+<p>
+<strong>
+What should you do first when asked a coding interview question?
+</strong>
+</p>
+
+<div class="quiz-options">
+
+<button onclick="interviewQuiz8(this,true)">
+Understand the problem
+</button>
+
+<button onclick="interviewQuiz8(this,false)">
+Immediately write random code
+</button>
+
+<button onclick="interviewQuiz8(this,false)">
+Skip the examples
+</button>
+
+<button onclick="interviewQuiz8(this,false)">
+Ignore edge cases
+</button>
+
+</div>
+
+<div id="interview-quiz8"></div>
+
+</section>
+
+
+<!-- FINAL INTERVIEW TIPS -->
+
+<section class="learning-card">
+
+<div class="section-title">
+<span>🔥</span>
+<h2>Final Interview Tips</h2>
+</div>
+
+<div class="use-grid">
+
+<div>🗣️ Speak clearly</div>
+<div>🧠 Explain your logic</div>
+<div>💻 Practice coding</div>
+<div>🐛 Understand errors</div>
+<div>⏱️ Know complexity</div>
+<div>🎯 Don't memorize blindly</div>
+<div>📚 Revise fundamentals</div>
+<div>😊 Stay confident</div>
+
+</div>
+
+</section>
+
+
+<div class="topic-navigation">
+
+<a href="coding-questions.html" class="back-btn">
+← Coding Questions
+</a>
+
+<a href="projects.html" class="next-btn">
+Projects →
+</a>
+
+</div>
+
+
+</main>
+
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>

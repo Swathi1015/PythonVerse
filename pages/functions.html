@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Functions | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">⚙️</div>
+<span class="topic-level">🚀 BEGINNER → INTERMEDIATE</span>
+<h1>Python Functions</h1>
+<p>Learn how to create reusable and organized blocks of code.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is a Function?</h2></div>
+<p>A function is a reusable block of code designed to perform a specific task.</p>
+
+<div class="code-box">
+<code>
+def greet():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Hello Python!")<br><br>
+greet()
+</code>
+</div>
+
+<p style="margin-top:20px;">Here <strong>def</strong> is used to define a function and <strong>greet()</strong> calls the function.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>1️⃣</span><h2>Parameters & Arguments</h2></div>
+<p>Parameters receive values inside a function. The values passed while calling the function are called arguments.</p>
+
+<div class="code-box">
+<code>
+def greet(name):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Hello", name)<br><br>
+greet("Swathi")
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>name</strong> → parameter | <strong>"Swathi"</strong> → argument</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>↩️</span><h2>Return Statement</h2></div>
+<p>The <strong>return</strong> statement sends a result back from a function.</p>
+
+<div class="code-box">
+<code>
+def add(a,b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
+result = add(10,20)<br>
+print(result)
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>30</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🌍</span><h2>Local & Global Scope</h2></div>
+<p>A local variable exists inside a function. A global variable is declared outside a function.</p>
+
+<div class="code-box">
+<code>
+x = 10<br><br>
+def show():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y = 20<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(y)<br><br>
+show()<br>
+print(x)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔄</span><h2>Recursion</h2></div>
+<p>When a function calls itself, it is called <strong>recursion</strong>.</p>
+
+<div class="code-box">
+<code>
+def countdown(n):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if n == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(n)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;countdown(n - 1)<br><br>
+countdown(5)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⚡</span><h2>Lambda Function</h2></div>
+<p>A lambda is a small anonymous function written in a single expression.</p>
+
+<div class="code-box">
+<code>
+square = lambda x: x * x<br><br>
+print(square(5))
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>25</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💼</span><h2>Real-Time Example</h2></div>
+<p>Functions are useful when the same task needs to be performed many times, such as calculating a shopping bill.</p>
+
+<div class="code-box">
+<code>
+def calculate_total(price,quantity):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return price * quantity<br><br>
+total = calculate_total(500,3)<br>
+print("Total:",total)
+</code>
+</div>
+
+<button class="run-demo" onclick="showFunctionDemo()">▶ Run Example</button>
+<div id="function-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create a function called <strong>calculate_area()</strong> that accepts length and width and returns the area of a rectangle.</p>
+
+<div class="task">
+1. Define the function.<br>
+2. Accept length and width as parameters.<br>
+3. Calculate length × width.<br>
+4. Return the result.<br>
+5. Call the function and print the answer.
+</div>
+
+<textarea id="function-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkFunctionExercise()">Check Answer ✓</button>
+<div id="function-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which keyword is used to create a function in Python?</strong></p>
+
+<div class="quiz-options">
+<button onclick="functionQuiz(this,false)">function</button>
+<button onclick="functionQuiz(this,true)">def</button>
+<button onclick="functionQuiz(this,false)">create</button>
+</div>
+
+<div id="function-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="dictionaries.html" class="back-btn">← Dictionaries</a>
+<a href="modules-packages.html" class="next-btn">Modules & Packages →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

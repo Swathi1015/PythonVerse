@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Type Casting | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg"><div class="topic-orb orb1"></div><div class="topic-orb orb2"></div></div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🔄</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Type Casting</h1>
+<p>Learn how to convert one data type into another in Python.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is Type Casting?</h2></div>
+<p>Type casting means converting a value from one data type to another. Python provides functions like <strong>int()</strong>, <strong>float()</strong>, <strong>str()</strong> and <strong>bool()</strong> for conversion.</p>
+
+<div class="example-row">
+<div class="example-item">📝<strong>String</strong><span>"25"</span></div>
+<div class="example-arrow">➡️</div>
+<div class="example-item">🔢<strong>Integer</strong><span>25</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔢</span><h2>Common Type Casting Functions</h2></div>
+
+<div class="feature-grid">
+<div class="feature">🔢<strong>int()</strong><span>Convert to integer</span></div>
+<div class="feature">🔣<strong>float()</strong><span>Convert to decimal</span></div>
+<div class="feature">📝<strong>str()</strong><span>Convert to string</span></div>
+<div class="feature">✅<strong>bool()</strong><span>Convert to Boolean</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Example</h2></div>
+
+<div class="code-box">
+<code>
+age = "22"<br>
+age = int(age)<br><br>
+print(age)<br>
+print(type(age))
+</code>
+</div>
+
+<button class="run-demo" onclick="showCastingDemo()">▶ Run Example</button>
+<div id="variable-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧠</span><h2>Real-Life Example</h2></div>
+
+<p>Suppose a user enters their age using <strong>input()</strong>. Input normally gives us a string. If we want to perform mathematical calculations, we convert it into an integer.</p>
+
+<div class="code-box">
+<code>
+age = int(input("Enter your age: "))<br>
+next

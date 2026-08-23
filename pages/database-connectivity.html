@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Database Connectivity | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🗄️</div>
+<span class="topic-level">🔥 ADVANCED</span>
+<h1>Database Connectivity</h1>
+<p>Learn how Python applications connect, store, retrieve and manage data in databases.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is Database Connectivity?</h2></div>
+<p>Database connectivity means connecting a Python program to a database so that the program can store, read, update and delete data.</p>
+
+<div class="use-grid">
+<div>🔌 <strong>Connect</strong><br>Connect Python to database</div>
+<div>➕ <strong>Insert</strong><br>Store new data</div>
+<div>🔍 <strong>Read</strong><br>Retrieve stored data</div>
+<div>✏️ <strong>Update</strong><br>Modify existing data</div>
+<div>🗑️ <strong>Delete</strong><br>Remove data</div>
+<div>💾 <strong>Commit</strong><br>Save changes permanently</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🗃️</span><h2>What is a Database?</h2></div>
+<p>A database is an organized collection of data that allows applications to store and manage information efficiently.</p>
+
+<p><strong>Example:</strong> A college application may store student information such as:</p>
+
+<div class="task">
+👤 Student Name<br>
+🎓 Student ID<br>
+📚 Branch<br>
+📧 Email<br>
+📊 Marks
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🐍</span><h2>Python & Databases</h2></div>
+<p>Python can communicate with different databases using database-specific libraries or connectors.</p>
+
+<div class="comparison">
+<div>
+<strong>🟢 SQLite</strong>
+<p>Built into Python</p>
+<p>No separate server required</p>
+</div>
+<div>
+<strong>🔵 MySQL</strong>
+<p>Popular relational database</p>
+<p>Requires connector</p>
+</div>
+<div>
+<strong>🟣 PostgreSQL</strong>
+<p>Powerful relational database</p>
+<p>Used in large applications</p>
+</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🟢</span><h2>SQLite</h2></div>
+<p>SQLite is a lightweight relational database. Python provides the built-in <strong>sqlite3</strong> module to work with SQLite.</p>
+
+<div class="code-box">
+<code>
+import sqlite3<br><br>
+connection = sqlite3.connect("students.db")<br><br>
+print("Database connected successfully!")
+</code>
+</div>
+
+<p style="margin-top:20px;">The <strong>connect()</strong> function creates a connection to the database. If the database does not exist, SQLite can create it.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔌</span><h2>Creating a Connection</h2></div>
+
+<div class="code-box">
+<code>
+import sqlite3<br><br>
+connection = sqlite3.connect("college.db")<br><br>
+print("Connected!")
+</code>
+</div>
+
+<div class="interview-box">
+<strong>💡 Remember:</strong>
+<p>The connection object represents the connection between your Python program and the database.</p>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Cursor Object</h2></div>
+<p>A cursor is used to execute SQL commands from Python.</p>
+
+<div class="code-box">
+<code>
+import sqlite3<br><br>
+connection = sqlite3.connect("college.db")<br>
+cursor = connection.cursor()
+</code>
+</div>
+
+<p style="margin-top:20px;">Think of the cursor as the object through which Python sends SQL commands to the database.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🏗️</span><h2>Create a Table</h2></div>
+
+<div class="code-box">
+<code>
+import sqlite3<br><br>
+connection = sqlite3.connect("college.db")<br>
+cursor = connection.cursor()<br><br>
+cursor.execute("""<br>
+CREATE TABLE IF NOT EXISTS students (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id INTEGER PRIMARY KEY,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name TEXT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;branch TEXT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;marks INTEGER<br>
+)<br>
+""")<br><br>
+connection.commit()<br>
+connection.close()
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>CREATE TABLE</strong> creates the structure where student data will be stored.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>➕</span><h2>Insert Data</h2></div>
+
+<div class="code-box">
+<code>
+cursor.execute(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"INSERT INTO students (name,branch,marks) VALUES (?,?,?)",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;("Swathi","CSE",85)<br>
+)<br><br>
+connection.commit()
+</code>
+</div>
+
+<div class="interview-box">
+<strong>💡 Important:</strong>
+<p>The <strong>?</strong> placeholders are used for parameterized queries. This is safer than directly building SQL strings with user input.</p>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔍</span><h2>Read Data — SELECT</h2></div>
+
+<div class="code-box">
+<code>
+cursor.execute("SELECT * FROM students")<br><br>
+students = cursor.fetchall()<br><br>
+for student in students:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(student)
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>fetchall()</strong> retrieves all available rows from the result.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>1️⃣</span><h2>fetchone()</h2></div>
+
+<p>When you need only one row, you can use <strong>fetchone()</strong>.</p>
+
+<div class="code-box">
+<code>
+cursor.execute("SELECT * FROM students")<br><br>
+student = cursor.fetchone()<br>
+print(student)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>✏️</span><h2>Update Data</h2></div>
+
+<div class="code-box">
+<code>
+cursor.execute(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"UPDATE students SET marks=? WHERE name=?",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(90,"Swathi")<br>
+)<br><br>
+connection.commit()
+</code>
+</div>
+
+<p style="margin-top:20px;">This changes Swathi's marks from the previous value to <strong>90</strong>.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🗑️</span><h2>Delete Data</h2></div>
+
+<div class="code-box">
+<code>
+cursor.execute(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"DELETE FROM students WHERE name=?",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;("Swathi",)<br>
+)<br><br>
+connection.commit()
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💾</span><h2>commit() & close()</h2></div>
+
+<p><strong>commit()</strong> saves database changes.</p>
+
+<p style="margin-top:15px;"><strong>close()</strong> closes the database connection when the work is finished.</p>
+
+<div class="code-box">
+<code>
+connection.commit()<br>
+connection.close()
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💼</span><h2>Complete CRUD Example</h2></div>
+
+<p>CRUD stands for:</p>
+
+<div class="use-grid">
+<div>➕ <strong>Create</strong><br>INSERT</div>
+<div>🔍 <strong>Read</strong><br>SELECT</div>
+<div>✏️ <strong>Update</strong><br>UPDATE</div>
+<div>🗑️ <strong>Delete</strong><br>DELETE</div>
+</div>
+
+<div class="code-box">
+<code>
+import sqlite3<br><br>
+connection = sqlite3.connect("college.db")<br>
+cursor = connection.cursor()<br><br>
+cursor.execute("""<br>
+CREATE TABLE IF NOT EXISTS students (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id INTEGER PRIMARY KEY AUTOINCREMENT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name TEXT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;branch TEXT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;marks INTEGER<br>
+)<br>
+""")<br><br>
+cursor.execute(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"INSERT INTO students (name,branch,marks) VALUES (?,?,?)",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;("Rahul","CSE",88)<br>
+)<br><br>
+connection.commit()<br><br>
+cursor.execute("SELECT * FROM students")<br>
+rows = cursor.fetchall()<br><br>
+for row in rows:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(row)<br><br>
+connection.close()
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🌍</span><h2>Real-Time Applications</h2></div>
+
+<div class="use-grid">
+<div>🎓 Student Management System</div>
+<div>🏦 Banking Applications</div>
+<div>🛒 E-Commerce Websites</div>
+<div>🏥 Hospital Management</div>
+<div>💰 Expense Tracker</div>
+<div>📦 Inventory Management</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create a SQLite database called <strong>library.db</strong> and create a table called <strong>books</strong>.</p>
+
+<div class="task">
+1. Create a connection.<br>
+2. Create a cursor.<br>
+3. Create a books table.<br>
+4. Add id, title and author columns.<br>
+5. Insert one book.<br>
+6. Retrieve the book using SELECT.<br>
+7. Print the result.<br>
+8. Close the connection.
+</div>
+
+<textarea id="database-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkDatabaseExercise()">Check Answer ✓</button>
+<div id="database-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which Python module is used for SQLite database connectivity?</strong></p>
+
+<div class="quiz-options">
+<button onclick="databaseQuiz(this,true)">sqlite3</button>
+<button onclick="databaseQuiz(this,false)">database</button>
+<button onclick="databaseQuiz(this,false)">sqlconnect</button>
+</div>
+
+<div id="database-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="advanced-python.html" class="back-btn">← Advanced Python</a>
+<a href="mnc-interview.html" class="next-btn">MNC Interview →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

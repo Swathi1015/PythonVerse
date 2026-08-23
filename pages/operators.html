@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Operators | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">➕</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Operators</h1>
+<p>Learn how Python performs calculations, comparisons and logical operations.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What are Operators?</h2></div>
+<p>Operators are special symbols or keywords used to perform operations on values and variables.</p>
+
+<div class="example-row">
+<div class="example-item">🔢<strong>10</strong><span>Value</span></div>
+<div class="example-arrow">➕</div>
+<div class="example-item">🔢<strong>20</strong><span>Value</span></div>
+<div class="example-arrow">=</div>
+<div class="example-item">🎯<strong>30</strong><span>Result</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧮</span><h2>1. Arithmetic Operators</h2></div>
+<div class="operator-grid">
+<div>➕ <strong>Addition</strong><span>+</span></div>
+<div>➖ <strong>Subtraction</strong><span>-</span></div>
+<div>✖️ <strong>Multiplication</strong><span>*</span></div>
+<div>➗ <strong>Division</strong><span>/</span></div>
+<div>🔢 <strong>Floor Division</strong><span>//</span></div>
+<div>💯 <strong>Modulus</strong><span>%</span></div>
+<div>⚡ <strong>Exponentiation</strong><span>**</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⚖️</span><h2>2. Comparison Operators</h2></div>
+<div class="operator-grid">
+<div>Equal <strong>==</strong><span>10 == 10 → True</span></div>
+<div>Not Equal <strong>!=</strong><span>10 != 5 → True</span></div>
+<div>Greater <strong>&gt;</strong><span>10 &gt; 5 → True</span></div>
+<div>Less <strong>&lt;</strong><span>5 &lt; 10 → True</span></div>
+<div>Greater/Equal <strong>&gt;=</strong><span>10 &gt;= 10 → True</span></div>
+<div>Less/Equal <strong>&lt;=</strong><span>5 &lt;= 10 → True</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧠</span><h2>3. Logical Operators</h2></div>
+<div class="operator-grid">
+<div>AND <strong>and</strong><span>Both conditions True</span></div>
+<div>OR <strong>or</strong><span>Any one condition True</span></div>
+<div>NOT <strong>not</strong><span>Reverses the result</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📝</span><h2>4. Assignment Operators</h2></div>
+<div class="operator-grid">
+<div>Assign <strong>=</strong><span>x = 10</span></div>
+<div>Add & Assign <strong>+=</strong><span>x += 5</span></div>
+<div>Subtract & Assign <strong>-=</strong><span>x -= 5</span></div>
+<div>Multiply & Assign <strong>*=</strong><span>x *= 5</span></div>
+<div>Divide & Assign <strong>/=</strong><span>x /= 5</span></div>
+<div>Modulus & Assign <strong>%=</strong><span>x %= 5</span></div>
+<div>Floor & Assign <strong>//=</strong><span>x //= 5</span></div>
+<div>Power & Assign <strong>**=</strong><span>x **= 2</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔎</span><h2>5. Membership Operators</h2></div>
+<div class="operator-grid">
+<div>IN <strong>in</strong><span>"a" in "cat"</span></div>
+<div>NOT IN <strong>not in</strong><span>"x" not in "cat"</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🪞</span><h2>6. Identity Operators</h2></div>
+<div class="operator-grid">
+<div>IS <strong>is</strong><span>Checks same object</span></div>
+<div>IS NOT <strong>is not</strong><span>Checks different object</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Try Python Code</h2></div>
+
+<div class="code-box">
+<code>
+a = 20<br>
+b = 5<br><br>
+print("Addition:", a + b)<br>
+print("Subtraction:", a - b)<br>
+print("Multiplication:", a * b)<br>
+print("Division:", a / b)<br>
+print("Floor Division:", a // b)<br>
+print("Modulus:", a % b)<br>
+print("Power:", a ** b)<br>
+print("Comparison:", a &gt; b)
+</code>
+</div>
+
+<button class="run-demo" onclick="showOperatorDemo()">▶ Run Example</button>
+<div id="operator-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+<p>Create two variables <strong>a = 15</strong> and <strong>b = 4</strong> and find:</p>
+
+<div class="task">
+1. Addition<br>
+2. Subtraction<br>
+3. Multiplication<br>
+4. Division<br>
+5. Floor Division<br>
+6. Remainder<br>
+7. Power<br>
+8. Check whether a is greater than b
+</div>
+
+<textarea id="operator-answer" placeholder="Write your Python code here..."></textarea>
+<button class="check-btn" onclick="checkOperatorExercise()">Check Answer ✓</button>
+<div id="operator-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>What is the result of 17 % 5?</strong></p>
+
+<div class="quiz-options">
+<button onclick="operatorQuiz(this,false)">1</button>
+<button onclick="operatorQuiz(this,true)">2</button>
+<button onclick="operatorQuiz(this,false)">3</button>
+</div>
+
+<div id="operator-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="type-casting.html" class="back-btn">← Type Casting</a>
+<a href="keywords-identifiers.html" class="next-btn">Keywords & Identifiers →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

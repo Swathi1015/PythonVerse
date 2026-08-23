@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>File Handling | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">📁</div>
+<span class="topic-level">🚀 INTERMEDIATE</span>
+<h1>Python File Handling</h1>
+<p>Learn how to create, read, write and manage files using Python.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is File Handling?</h2></div>
+<p>File handling allows Python programs to store data permanently in files and read that data whenever needed.</p>
+
+<div class="code-box">
+<code>
+file = open("data.txt","r")<br>
+content = file.read()<br>
+print(content)<br>
+file.close()
+</code>
+</div>
+
+<p style="margin-top:20px;">Python uses the <strong>open()</strong> function to work with files.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔑</span><h2>File Modes</h2></div>
+
+<div class="use-grid">
+<div>📖 <strong>"r"</strong><br>Read a file</div>
+<div>✏️ <strong>"w"</strong><br>Write to a file</div>
+<div>➕ <strong>"a"</strong><br>Add content to a file</div>
+<div>📄 <strong>"x"</strong><br>Create a new file</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📖</span><h2>Reading a File</h2></div>
+
+<div class="code-box">
+<code>
+file = open("data.txt","r")<br>
+content = file.read()<br>
+print(content)<br>
+file.close()
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>read()</strong> reads the complete content of the file.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>✍️</span><h2>Writing to a File</h2></div>
+
+<div class="code-box">
+<code>
+file = open("data.txt","w")<br>
+file.write("Hello Python!")<br>
+file.close()
+</code>
+</div>
+
+<p style="margin-top:20px;">The <strong>"w"</strong> mode writes data to the file. Be careful: it can replace existing content.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>➕</span><h2>Appending Data</h2></div>
+
+<div class="code-box">
+<code>
+file = open("data.txt","a")<br>
+file.write("\\nWelcome to Python")<br>
+file.close()
+</code>
+</div>
+
+<p style="margin-top:20px;">The <strong>"a"</strong> mode adds new content without removing existing content.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>✨</span><h2>Using with Statement</h2></div>
+
+<p>The <strong>with</strong> statement automatically closes the file after the operation.</p>
+
+<div class="code-box">
+<code>
+with open("data.txt","r") as file:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content = file.read()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(content)
+</code>
+</div>
+
+<p style="margin-top:20px;">This is the recommended way to work with files in Python.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💼</span><h2>Real-Time Example</h2></div>
+
+<p>File handling can be used to store student information, logs, reports and application data.</p>
+
+<div class="code-box">
+<code>
+with open("students.txt","w") as file:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file.write("Swathi - CSE")<br><br>
+print("Student data saved successfully!")
+</code>
+</div>
+
+<button class="run-demo" onclick="showFileDemo()">▶ Run Example</button>
+<div id="file-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Write a Python program to create a file called <strong>notes.txt</strong> and store your favourite Python topic in it.</p>
+
+<div class="task">
+1. Open the file using "w" mode.<br>
+2. Write some text using write().<br>
+3. Close the file.<br>
+4. Open it again using "r".<br>
+5. Read and print the content.
+</div>
+
+<textarea id="file-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkFileExercise()">Check Answer ✓</button>
+<div id="file-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which file mode is used to add content to an existing file?</strong></p>
+
+<div class="quiz-options">
+<button onclick="fileQuiz(this,false)">"r"</button>
+<button onclick="fileQuiz(this,true)">"a"</button>
+<button onclick="fileQuiz(this,false)">"x"</button>
+</div>
+
+<div id="file-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="modules-packages.html" class="back-btn">← Modules & Packages</a>
+<a href="exception-handling.html" class="next-btn">Exception Handling →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

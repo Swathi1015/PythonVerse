@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Exception Handling | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">⚠️</div>
+<span class="topic-level">🚀 INTERMEDIATE</span>
+<h1>Exception Handling</h1>
+<p>Learn how to handle errors and keep your Python programs running safely.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is an Exception?</h2></div>
+<p>An exception is an error that occurs while a Python program is running. If it is not handled, the program may stop unexpectedly.</p>
+
+<div class="code-box">
+<code>
+number = 10<br>
+print(number / 0)
+</code>
+</div>
+
+<p style="margin-top:20px;">This causes a <strong>ZeroDivisionError</strong> because a number cannot be divided by zero.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🛡️</span><h2>try & except</h2></div>
+<p>Use <strong>try</strong> for code that may cause an error and <strong>except</strong> to handle that error.</p>
+
+<div class="code-box">
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number = 10 / 0<br>
+except ZeroDivisionError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Cannot divide by zero!")
+</code>
+</div>
+
+<p style="margin-top:20px;">Instead of crashing, the program handles the error gracefully.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔄</span><h2>try, except & else</h2></div>
+
+<div class="code-box">
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number = 10 / 2<br>
+except ZeroDivisionError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Invalid division")<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Result:",number)
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>else</strong> runs when no exception occurs.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧹</span><h2>finally</h2></div>
+<p>The <strong>finally</strong> block runs whether an exception occurs or not.</p>
+
+<div class="code-box">
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Processing...")<br>
+except:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Something went wrong")<br>
+finally:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Operation completed")
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Handling Multiple Errors</h2></div>
+
+<div class="code-box">
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number = int(input("Enter number: "))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result = 100 / number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(result)<br>
+except ValueError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Please enter a number")<br>
+except ZeroDivisionError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Number cannot be zero")
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💼</span><h2>Real-Time Example</h2></div>
+<p>Exception handling is useful when taking input from users, processing files, connecting to databases and working with APIs.</p>
+
+<div class="code-box">
+<code>
+try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age = int("twenty")<br>
+except ValueError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Invalid age!")
+</code>
+</div>
+
+<button class="run-demo" onclick="showExceptionDemo()">▶ Run Example</button>
+<div id="exception-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Write a program that safely divides two numbers.</p>
+
+<div class="task">
+1. Use try and except.<br>
+2. Take two numbers.<br>
+3. Divide the first number by the second.<br>
+4. Handle ZeroDivisionError.<br>
+5. Display a friendly error message.
+</div>
+
+<textarea id="exception-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkExceptionExercise()">Check Answer ✓</button>
+<div id="exception-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which block is used to handle an exception?</strong></p>
+
+<div class="quiz-options">
+<button onclick="exceptionQuiz(this,false)">try</button>
+<button onclick="exceptionQuiz(this,true)">except</button>
+<button onclick="exceptionQuiz(this,false)">finally</button>
+</div>
+
+<div id="exception-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="file-handling.html" class="back-btn">← File Handling</a>
+<a href="oop.html" class="next-btn">OOP →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

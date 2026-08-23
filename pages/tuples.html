@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tuples | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">📦</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Tuples</h1>
+<p>Learn how to store multiple values that should not be changed.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is a Tuple?</h2></div>
+<p>A tuple is an ordered collection of items. Unlike lists, tuples are <strong>immutable</strong>, which means their values cannot be changed after creation.</p>
+
+<div class="code-box">
+<code>
+colors = ("Red","Blue","Green")<br><br>
+print(colors)
+</code>
+</div>
+
+<p style="margin-top:20px;">Tuples are usually created using <strong>( )</strong> parentheses.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔢</span><h2>Tuple Indexing</h2></div>
+<p>Tuple elements also have indexes starting from <strong>0</strong>.</p>
+
+<div class="code-box">
+<code>
+colors = ("Red","Blue","Green")<br><br>
+print(colors[0])<br>
+print(colors[1])<br>
+print(colors[-1])
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>Red, Blue, Green</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔒</span><h2>Tuple is Immutable</h2></div>
+<p>Once a tuple is created, you cannot directly change, add or remove its elements.</p>
+
+<div class="code-box">
+<code>
+numbers = (10,20,30)<br><br>
+numbers[0] = 100<br><br>
+# TypeError ❌
+</code>
+</div>
+
+<p style="margin-top:20px;">If you need to modify data frequently, use a <strong>list</strong> instead.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🛠️</span><h2>Important Tuple Methods</h2></div>
+
+<div class="use-grid">
+<div>🔎 <strong>count()</strong><br>Counts an item</div>
+<div>📍 <strong>index()</strong><br>Finds item position</div>
+<div>📏 <strong>len()</strong><br>Finds number of items</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⚖️</span><h2>List vs Tuple</h2></div>
+
+<div class="code-box">
+<code>
+List  → [10,20,30]  → Mutable ✏️<br>
+Tuple → (10,20,30)  → Immutable 🔒
+</code>
+</div>
+
+<p style="margin-top:20px;">Use a <strong>list</strong> when data needs to change. Use a <strong>tuple</strong> when data should remain fixed.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Python Example</h2></div>
+
+<div class="code-box">
+<code>
+student = ("Swathi",22,"CSE")<br><br>
+print(student[0])<br>
+print(student[1])<br>
+print(student[2])<br>
+print(len(student))
+</code>
+</div>
+
+<button class="run-demo" onclick="showTupleDemo()">▶ Run Example</button>
+<div id="tuple-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create a tuple called <strong>student</strong> containing your name, age and branch.</p>
+
+<div class="task">
+1. Print the first item.<br>
+2. Print the last item.<br>
+3. Find the length of the tuple.<br>
+4. Use count() on one item.<br>
+5. Try changing one item and observe what happens.
+</div>
+
+<textarea id="tuple-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkTupleExercise()">Check Answer ✓</button>
+<div id="tuple-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which statement about tuples is correct?</strong></p>
+
+<div class="quiz-options">
+<button onclick="tupleQuiz(this,false)">Tuples are mutable</button>
+<button onclick="tupleQuiz(this,true)">Tuples are immutable</button>
+<button onclick="tupleQuiz(this,false)">Tuples cannot store multiple values</button>
+</div>
+
+<div id="tuple-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="lists.html" class="back-btn">← Lists</a>
+<a href="sets.html" class="next-btn">Sets →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

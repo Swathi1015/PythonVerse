@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dictionaries | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">📖</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Dictionaries</h1>
+<p>Learn how to store and access data using key-value pairs.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is a Dictionary?</h2></div>
+<p>A dictionary stores data in <strong>key-value pairs</strong>. Each key is used to access its corresponding value.</p>
+
+<div class="code-box">
+<code>
+student = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "Swathi",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"age": 22,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"branch": "CSE"<br>
+}<br><br>
+print(student)
+</code>
+</div>
+
+<p style="margin-top:20px;">Dictionaries are created using <strong>{ }</strong> curly brackets.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔑</span><h2>Accessing Values</h2></div>
+<p>Use the key to access its value.</p>
+
+<div class="code-box">
+<code>
+student = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "Swathi",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"age": 22<br>
+}<br><br>
+print(student["name"])<br>
+print(student["age"])
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>Swathi</strong> and <strong>22</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>✏️</span><h2>Changing Values</h2></div>
+<p>Dictionaries are mutable, so their values can be changed.</p>
+
+<div class="code-box">
+<code>
+student = {"name":"Swathi","age":22}<br><br>
+student["age"] = 23<br><br>
+print(student)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>➕</span><h2>Adding Items</h2></div>
+<p>Add a new key-value pair by assigning a value to a new key.</p>
+
+<div class="code-box">
+<code>
+student = {"name":"Swathi"}<br><br>
+student["branch"] = "CSE"<br><br>
+print(student)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🗑️</span><h2>Removing Items</h2></div>
+
+<div class="code-box">
+<code>
+student = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"name":"Swathi",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"age":22,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"branch":"CSE"<br>
+}<br><br>
+student.pop("age")<br>
+print(student)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🛠️</span><h2>Important Dictionary Methods</h2></div>
+
+<div class="use-grid">
+<div>🔑 <strong>keys()</strong><br>Returns all keys</div>
+<div>💎 <strong>values()</strong><br>Returns all values</div>
+<div>🔗 <strong>items()</strong><br>Returns key-value pairs</div>
+<div>➕ <strong>update()</strong><br>Updates dictionary</div>
+<div>🗑️ <strong>pop()</strong><br>Removes an item</div>
+<div>🔎 <strong>get()</strong><br>Gets a value safely</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Real-Time Example</h2></div>
+<p>Dictionaries are commonly used to represent structured information such as user profiles.</p>
+
+<div class="code-box">
+<code>
+user = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "Swathi",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"age": 22,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"course": "BTech CSE"<br>
+}<br><br>
+print(user["name"])<br>
+print(user["course"])
+</code>
+</div>
+
+<button class="run-demo" onclick="showDictionaryDemo()">▶ Run Example</button>
+<div id="dictionary-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create a dictionary called <strong>employee</strong> containing name, age and salary.</p>
+
+<div class="task">
+1. Print the employee name.<br>
+2. Add a department key.<br>
+3. Change the salary.<br>
+4. Remove the age.<br>
+5. Print all keys using keys().
+</div>
+
+<textarea id="dictionary-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkDictionaryExercise()">Check Answer ✓</button>
+<div id="dictionary-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which data structure stores data using key-value pairs?</strong></p>
+
+<div class="quiz-options">
+<button onclick="dictionaryQuiz(this,false)">List</button>
+<button onclick="dictionaryQuiz(this,false)">Tuple</button>
+<button onclick="dictionaryQuiz(this,true)">Dictionary</button>
+</div>
+
+<div id="dictionary-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="sets.html" class="back-btn">← Sets</a>
+<a href="functions.html" class="next-btn">Functions →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

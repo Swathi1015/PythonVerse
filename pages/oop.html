@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>OOP | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🏛️</div>
+<span class="topic-level">🚀 INTERMEDIATE</span>
+<h1>Object-Oriented Programming</h1>
+<p>Learn how Python uses Classes and Objects to build organized programs.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is OOP?</h2></div>
+<p>Object-Oriented Programming is a programming approach where we organize code using <strong>objects</strong> and <strong>classes</strong>.</p>
+
+<div class="task">
+🏗️ Class → Blueprint<br>
+🏠 Object → Real thing created from the blueprint
+</div>
+
+<p style="margin-top:20px;">For example, <strong>Car</strong> can be a class and a particular car can be an object.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🏗️</span><h2>Class & Object</h2></div>
+
+<div class="code-box">
+<code>
+class Student:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pass<br><br>
+student1 = Student()<br>
+print(student1)
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>Student</strong> is the class and <strong>student1</strong> is an object.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⚙️</span><h2>__init__() Method</h2></div>
+
+<p>The <strong>__init__()</strong> method runs automatically when an object is created. It is commonly used to initialize object data.</p>
+
+<div class="code-box">
+<code>
+class Student:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self,name,age):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br><br>
+student1 = Student("Swathi",22)<br><br>
+print(student1.name)<br>
+print(student1.age)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔧</span><h2>Methods</h2></div>
+
+<p>A method is a function defined inside a class.</p>
+
+<div class="code-box">
+<code>
+class Student:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def greet(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Hello Python!")<br><br>
+student1 = Student()<br>
+student1.greet()
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧬</span><h2>Inheritance</h2></div>
+
+<p>Inheritance allows one class to reuse properties and methods from another class.</p>
+
+<div class="code-box">
+<code>
+class Animal:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def sound(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Animal makes a sound")<br><br>
+class Dog(Animal):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pass<br><br>
+dog = Dog()<br>
+dog.sound()
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>Dog</strong> inherits the <strong>sound()</strong> method from Animal.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Four Main OOP Concepts</h2></div>
+
+<div class="use-grid">
+<div>🔒 <strong>Encapsulation</strong><br>Protect and organize data</div>
+<div>🧬 <strong>Inheritance</strong><br>Reuse existing code</div>
+<div>🎭 <strong>Polymorphism</strong><br>Same interface, different behavior</div>
+<div>🎨 <strong>Abstraction</strong><br>Hide unnecessary details</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💼</span><h2>Real-Time Example</h2></div>
+
+<p>OOP is commonly used in applications such as banking systems, games, e-commerce applications and student management systems.</p>
+
+<div class="code-box">
+<code>
+class BankAccount:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self,balance):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.balance = balance<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;def show_balance(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Balance:",self.balance)<br><br>
+account = BankAccount(5000)<br>
+account.show_balance()
+</code>
+</div>
+
+<button class="run-demo" onclick="showOOPDemo()">▶ Run Example</button>
+<div id="oop-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create a <strong>Car</strong> class with a brand and model.</p>
+
+<div class="task">
+1. Create a class called Car.<br>
+2. Create an __init__() method.<br>
+3. Store brand and model using self.<br>
+4. Create an object.<br>
+5. Print the brand and model.
+</div>
+
+<textarea id="oop-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkOOPExercise()">Check Answer ✓</button>
+<div id="oop-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which keyword is used to create a class in Python?</strong></p>
+
+<div class="quiz-options">
+<button onclick="oopQuiz(this,false)">object</button>
+<button onclick="oopQuiz(this,true)">class</button>
+<button onclick="oopQuiz(this,false)">def</button>
+</div>
+
+<div id="oop-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="exception-handling.html" class="back-btn">← Exception Handling</a>
+<a href="advanced-python.html" class="next-btn">Advanced Python →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

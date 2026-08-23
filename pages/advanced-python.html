@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Advanced Python | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🚀</div>
+<span class="topic-level">🔥 ADVANCED</span>
+<h1>Advanced Python</h1>
+<p>Move beyond the basics and learn powerful Python features.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is Advanced Python?</h2></div>
+<p>Advanced Python includes powerful features that help developers write cleaner, shorter and more efficient programs.</p>
+
+<div class="use-grid">
+<div>⚡ Comprehensions</div>
+<div>📦 *args & **kwargs</div>
+<div>🎨 Decorators</div>
+<div>🔄 Generators</div>
+<div>🔁 Iterators</div>
+<div>🧠 Advanced Functions</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⚡</span><h2>List Comprehension</h2></div>
+<p>List comprehension provides a short way to create a list from another sequence.</p>
+
+<div class="code-box">
+<code>
+numbers = [1,2,3,4,5]<br><br>
+squares = [x*x for x in numbers]<br><br>
+print(squares)
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>[1, 4, 9, 16, 25]</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>📦</span><h2>*args</h2></div>
+<p><strong>*args</strong> allows a function to accept any number of positional arguments.</p>
+
+<div class="code-box">
+<code>
+def total(*numbers):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return sum(numbers)<br><br>
+print(total(10,20,30,40))
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>100</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔑</span><h2>**kwargs</h2></div>
+<p><strong>**kwargs</strong> allows a function to accept multiple keyword arguments.</p>
+
+<div class="code-box">
+<code>
+def student(**details):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(details)<br><br>
+student(name="Swathi",branch="CSE")
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎨</span><h2>Decorators</h2></div>
+<p>A decorator is a function that modifies or extends the behavior of another function.</p>
+
+<div class="code-box">
+<code>
+def welcome(func):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def wrapper():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Welcome!")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return wrapper<br><br>
+@welcome<br>
+def python():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Learn Python")<br><br>
+python()
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔄</span><h2>Generators</h2></div>
+<p>A generator produces values one at a time using the <strong>yield</strong> keyword.</p>
+
+<div class="code-box">
+<code>
+def numbers():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;yield 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;yield 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;yield 3<br><br>
+for n in numbers():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(n)
+</code>
+</div>
+
+<p style="margin-top:20px;">Generators are useful when working with large amounts of data because they produce values one at a time.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔁</span><h2>Iterators</h2></div>
+
+<div class="code-box">
+<code>
+numbers = [10,20,30]<br>
+iterator = iter(numbers)<br><br>
+print(next(iterator))<br>
+print(next(iterator))<br>
+print(next(iterator))
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>iter()</strong> creates an iterator and <strong>next()</strong> retrieves the next value.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💼</span><h2>Real-Time Example</h2></div>
+
+<p>Advanced Python concepts are commonly used in web development, automation, data processing and large applications.</p>
+
+<div class="code-box">
+<code>
+numbers = [1,2,3,4,5]<br><br>
+even = [x for x in numbers if x % 2 == 0]<br><br>
+print(even)
+</code>
+</div>
+
+<button class="run-demo" onclick="showAdvancedDemo()">▶ Run Example</button>
+<div id="advanced-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Use <strong>list comprehension</strong> to create a list containing the squares of numbers from 1 to 5.</p>
+
+<div class="task">
+1. Create numbers from 1 to 5.<br>
+2. Use list comprehension.<br>
+3. Calculate x × x.<br>
+4. Store the result in a new list.<br>
+5. Print the list.
+</div>
+
+<textarea id="advanced-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkAdvancedExercise()">Check Answer ✓</button>
+<div id="advanced-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which keyword is used in a Python generator?</strong></p>
+
+<div class="quiz-options">
+<button onclick="advancedQuiz(this,false)">return</button>
+<button onclick="advancedQuiz(this,true)">yield</button>
+<button onclick="advancedQuiz(this,false)">generate</button>
+</div>
+
+<div id="advanced-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="oop.html" class="back-btn">← OOP</a>
+<a href="projects.html" class="next-btn">Projects →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

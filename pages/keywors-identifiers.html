@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Keywords & Identifiers | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🔤</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Keywords & Identifiers</h1>
+<p>Learn the special words and naming rules used in Python.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>🔑</span>
+<h2>What are Keywords?</h2>
+</div>
+
+<p>Keywords are special reserved words in Python. They have a predefined meaning and cannot normally be used as variable or function names.</p>
+
+<div class="code-box">
+<code>
+if<br>
+else<br>
+for<br>
+while<br>
+def<br>
+class<br>
+return<br>
+True<br>
+False<br>
+None
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>🏷️</span>
+<h2>What are Identifiers?</h2>
+</div>
+
+<p>Identifiers are the names we give to variables, functions, classes and other objects in Python.</p>
+
+<div class="code-box">
+<code>
+name = "Python"<br>
+age = 22<br><br>
+def greet():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Hello")
+</code>
+</div>
+
+<p style="margin-top:20px;">Here <strong>name</strong>, <strong>age</strong> and <strong>greet</strong> are identifiers.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>📌</span>
+<h2>Identifier Rules</h2>
+</div>
+
+<div class="rules">
+<div>✅ Can contain letters, numbers and underscore.</div>
+<div>✅ Cannot start with a number.</div>
+<div>✅ Cannot contain spaces.</div>
+<div>✅ Cannot use Python keywords.</div>
+<div>✅ Python identifiers are case-sensitive.</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>✅</span>
+<h2>Valid Identifiers</h2>
+</div>
+
+<div class="code-box">
+<code>
+name = "Python"<br>
+student_name = "Swathi"<br>
+age2 = 22<br>
+_total = 100
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>❌</span>
+<h2>Invalid Identifiers</h2>
+</div>
+
+<div class="code-box">
+<code>
+2name = "Python" ❌<br>
+student name = "Bangaramm" ❌<br>
+class = "CSE" ❌<br>
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+<p>Which of these are valid identifiers?</p>
+
+<div class="task">
+1. student_name<br>
+2. 2student<br>
+3. total_marks<br>
+4. my name<br>
+5. _score
+</div>
+
+<textarea id="answer" placeholder="Write the valid identifiers here..."></textarea>
+<button class="check-btn" onclick="checkIdentifierExercise()">Check Answer ✓</button>
+<div id="identifier-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+<p><strong>Which one is a valid Python identifier?</strong></p>
+
+<div class="quiz-options">
+<button onclick="identifierQuiz(this,false)">2name</button>
+<button onclick="identifierQuiz(this,true)">student_name</button>
+<button onclick="identifierQuiz(this,false)">my-name</button>
+</div>
+
+<div id="identifier-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="operators.html" class="back-btn">← Operators</a>
+<a href="decision-making.html" class="next-btn">Decision Making →</a>
+</div>

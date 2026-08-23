@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Final Project | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+<header>
+<div class="logo">
+🐍 For You Python
+</div>
+
+<nav>
+
+<a href="../index.html">Home</a>
+
+<a href="../roadmap.html">Roadmap</a>
+
+</nav>
+
+</header>
+<main class="topic-page">
+<!-- HERO -->
+
+<section class="topic-hero">
+
+<div class="topic-icon">
+🚀
+</div>
+
+<span class="topic-level">
+🏆 FINAL PROJECT
+</span>
+
+<h1>
+Personal Expense Tracker
+</h1>
+
+<p>
+Build a real-world Python application that helps users
+manage and analyse their daily expenses.
+</p>
+
+</section>
+
+
+
+<!-- PROJECT OVERVIEW -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>🎯</span>
+
+<h2>Project Overview</h2>
+
+</div>
+
+<p>
+
+In this project, you will build a
+<strong>Personal Expense Tracker</strong>
+using Python.
+
+The application will allow users to add,
+view, update and delete their expenses.
+
+You will also create a simple system to
+calculate total spending and analyse expenses
+based on categories.
+
+</p>
+
+<div class="task">
+
+👤 User
+
+↓
+
+💰 Add Expense
+
+↓
+
+🗄️ Store Data
+
+↓
+
+📊 View Expenses
+
+↓
+
+📈 Analyse Spending
+
+</div>
+
+</section>
+
+
+
+<!-- WHAT YOU WILL BUILD -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>💡</span>
+
+<h2>What Will You Build?</h2>
+
+</div>
+
+
+<div class="use-grid">
+
+<div>💰 Add Expense</div>
+
+<div>📋 View Expenses</div>
+
+<div>✏️ Update Expense</div>
+
+<div>🗑️ Delete Expense</div>
+
+<div>📊 Calculate Total</div>
+
+<div>📂 Categories</div>
+
+<div>📅 Monthly Summary</div>
+
+<div>📈 Spending Analysis</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TECHNOLOGIES -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>🛠️</span>
+
+<h2>Technologies Used</h2>
+
+</div>
+
+
+<div class="use-grid">
+
+<div>🐍 Python</div>
+
+<div>🗄️ SQLite</div>
+
+<div>📁 File Handling</div>
+
+<div>🏛️ OOP</div>
+
+<div>🧪 Exception Handling</div>
+
+<div>📊 Data Processing</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONCEPTS -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>🧠</span>
+
+<h2>Python Concepts Used</h2>
+
+</div>
+
+
+<div class="question-list">
+
+<div>1️⃣ Variables & Data Types</div>
+
+<div>2️⃣ Input & Output</div>
+
+<div>3️⃣ Conditions</div>
+
+<div>4️⃣ Loops</div>
+
+<div>5️⃣ Functions</div>
+
+<div>6️⃣ Lists & Dictionaries</div>
+
+<div>7️⃣ File Handling</div>
+
+<div>8️⃣ Exception Handling</div>
+
+<div>9️⃣ OOP</div>
+
+<div>🔟 Database Connectivity</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STEP 1 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>1️⃣</span>
+
+<h2>Create the Project</h2>
+
+</div>
+
+<p>
+
+Create a new folder named:
+
+</p>
+
+<div class="code-box">
+
+<code>
+expense_tracker
+</code>
+
+</div>
+
+
+<p>
+
+Inside the folder create these files:
+
+</p>
+
+<div class="code-box">
+
+<code>
+expense_tracker/<br>
+│<br>
+├── main.py<br>
+├── database.py<br>
+├── expense.py<br>
+└── README.md
+</code>
+
+</div>
+
+</section>
+
+
+
+<!-- STEP 2 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>2️⃣</span>
+
+<h2>Create Database</h2>
+
+</div>
+
+<p>
+
+Python provides SQLite support through the
+<strong>sqlite3</strong> module.
+
+Create a database table to store expenses.
+
+</p>
+
+
+<div class="code-box">
+
+<code>
+
+import sqlite3<br><br>
+
+connection = sqlite3.connect("expenses.db")<br>
+
+cursor = connection.cursor()<br><br>
+
+cursor.execute("""<br>
+CREATE TABLE IF NOT EXISTS expenses (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id INTEGER PRIMARY KEY AUTOINCREMENT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title TEXT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;amount REAL,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;category TEXT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;date TEXT<br>
+)<br>
+""")<br><br>
+
+connection.commit()<br>
+
+connection.close()
+
+</code>
+
+</div>
+
+</section>
+
+
+
+<!-- STEP 3 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>3️⃣</span>
+
+<h2>Add Expense</h2>
+
+</div>
+
+<p>
+
+Create a function that accepts expense details
+and stores them in the database.
+
+</p>
+
+
+<div class="code-box">
+
+<code>
+
+def add_expense(title, amount, category, date):<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;connection = sqlite3.connect("expenses.db")<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;cursor = connection.cursor()<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;cursor.execute(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"INSERT INTO expenses<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(title, amount, category, date)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VALUES (?, ?, ?, ?)",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(title, amount, category, date)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;)<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;connection.commit()<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;connection.close()
+
+</code>
+
+</div>
+
+</section>
+
+
+
+<!-- STEP 4 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>4️⃣</span>
+
+<h2>View Expenses</h2>
+
+</div>
+
+<p>
+
+Retrieve all expenses from the database.
+
+</p>
+
+
+<div class="code-box">
+
+<code>
+
+def view_expenses():<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;connection = sqlite3.connect("expenses.db")<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;cursor = connection.cursor()<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;cursor.execute("SELECT * FROM expenses")<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;expenses = cursor.fetchall()<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;for expense in expenses:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(expense)<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;connection.close()
+
+</code>
+
+</div>
+
+</section>
+
+
+
+<!-- STEP 5 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>5️⃣</span>
+
+<h2>Calculate Total Expense</h2>
+
+</div>
+
+<p>
+
+Calculate how much money the user has spent.
+
+</p>
+
+
+<div class="code-box">
+
+<code>
+
+def total_expense():<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;connection = sqlite3.connect("expenses.db")<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;cursor = connection.cursor()<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;cursor.execute(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SELECT SUM(amount) FROM expenses"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;)<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;total = cursor.fetchone()[0]<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;print("Total Expense:", total)<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;connection.close()
+
+</code>
+
+</div>
+
+</section>
+
+
+
+<!-- STEP 6 -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>6️⃣</span>
+
+<h2>Menu System</h2>
+
+</div>
+
+<p>
+
+Create a menu so the user can interact with
+the application.
+
+</p>
+
+
+<div class="code-box">
+
+<code>
+
+while True:<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;print("1. Add Expense")<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;print("2. View Expenses")<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;print("3. Total Expense")<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;print("4. Exit")<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;choice = input("Enter choice: ")<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;if choice == "1":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Add Expense")<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;elif choice == "2":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;view_expenses()<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;elif choice == "3":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total_expense()<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;elif choice == "4":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Invalid choice")
+
+</code>
+
+</div>
+
+</section>
+
+
+
+<!-- EXCEPTION HANDLING -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>🧯</span>
+
+<h2>Add Exception Handling</h2>
+
+</div>
+
+<p>
+
+The program should not crash when the user enters
+invalid data.
+
+</p>
+
+
+<div class="code-box">
+
+<code>
+
+try:<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;amount = float(input("Enter amount: "))<br><br>
+
+except ValueError:<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;print("Please enter a valid number.")
+
+</code>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECT CHALLENGE -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>🔥</span>
+
+<h2>Your Challenge</h2>
+
+</div>
+
+
+<p>
+
+Now try improving the basic application yourself.
+
+</p>
+
+
+<div class="question-list">
+
+<div>☑️ Add Update Expense</div>
+
+<div>☑️ Add Delete Expense</div>
+
+<div>☑️ Search by Category</div>
+
+<div>☑️ Search by Date</div>
+
+<div>☑️ Monthly Expense Report</div>
+
+<div>☑️ Highest Expense</div>
+
+<div>☑️ Lowest Expense</div>
+
+<div>☑️ Add Budget Limit</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TESTING -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>🧪</span>
+
+<h2>Test Your Project</h2>
+
+</div>
+
+
+<div class="task">
+
+Test valid amount → ₹500<br><br>
+
+Test invalid amount → abc<br><br>
+
+Test empty title<br><br>
+
+Test negative amount<br><br>
+
+Test deleting an existing expense<br><br>
+
+Test deleting a non-existing expense<br><br>
+
+Test database connection
+
+</div>
+
+</section>
+
+
+
+<!-- INTERVIEW -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>💼</span>
+
+<h2>Interview Questions From This Project</h2>
+
+</div>
+
+
+<div class="question-list">
+
+<div>❓ Why did you use SQLite?</div>
+
+<div>❓ Why did you use functions?</div>
+
+<div>❓ Where is exception handling used?</div>
+
+<div>❓ How is data stored?</div>
+
+<div>❓ How does INSERT work?</div>
+
+<div>❓ How do you calculate total expenses?</div>
+
+<div>❓ How would you improve this project?</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECT IDEAS -->
+
+<section class="learning-card">
+
+<div class="section-title">
+
+<span>💡</span>
+
+<h2>More Project Ideas</h2>
+
+</div>
+
+
+<div class="use-grid">
+
+<div>🎓 Student Management</div>
+
+<div>📚 Library Management</div>
+
+<div>🏦 Banking System</div>
+
+<div>🛒 Shopping Cart</div>
+
+<div>🎬 Movie Recommendation</div>
+
+<div>☁️ Weather Application</div>
+
+<div>📝 To-Do Application</div>
+
+<div>💼 Employee Management</div>
+
+</div>
+</section>
+<!-- FINAL -->
+<section class="learning-card">
+<div class="section-title">
+<span>🏆</span>
+<h2>Final Goal</h2>
+</div>
+<p>
+Don't just copy the project.
+<strong>
+Understand every line, modify the project,
+add your own features and explain it confidently
+in an interview.
+</strong>
+</p>
+<div class="task">
+🐍 Learn Python<br><br>
+💻 Build Projects<br><br>
+🧠 Understand Logic<br><br>
+💼 Explain Your Project<br><br>
+🚀 Become Interview Ready!
+</div>
+</section>
+<!-- NAVIGATION -->
+<div class="topic-navigation">
+<a href="interview-questions.html" class="back-btn">
+← Interview Questions
+</a>
+<a href="../roadmap.html" class="next-btn">
+🏆 Back to Roadmap
+</a>
+</div>
+</main>
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

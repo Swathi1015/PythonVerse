@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Data Types | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg"><div class="topic-orb orb1"></div><div class="topic-orb orb2"></div></div>
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav><a href="../index.html">Home</a><a href="../roadmap.html">Roadmap</a></nav>
+</header>
+<main class="topic-page">
+<section class="topic-hero">
+<div class="topic-icon">🔢</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Data Types</h1>
+<p>Learn how Python understands and stores different kinds of data.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What are Data Types?</h2></div>
+<p>A data type tells Python what kind of value we are working with. For example, a number, text, or a collection of values.</p>
+<div class="feature-grid">
+<div class="feature">🔢<strong>int</strong><span>Whole numbers<br>Example: 25</span></div>
+<div class="feature">🔣<strong>float</strong><span>Decimal numbers<br>Example: 3.14</span></div>
+<div class="feature">📝<strong>str</strong><span>Text<br>Example: "Python"</span></div>
+<div class="feature">✅<strong>bool</strong><span>True or False</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🧠</span><h2>Common Python Data Types</h2></div>
+<div class="use-grid">
+<div>🔢 Integer — <b>10</b></div>
+<div>🔣 Float — <b>10.5</b></div>
+<div>📝 String — <b>"Hello"</b></div>
+<div>✅ Boolean — <b>True</b></div>
+<div>📚 List — <b>[1,2,3]</b></div>
+<div>📦 Tuple — <b>(1,2,3)</b></div>
+<div>🧩 Set — <b>{1,2,3}</b></div>
+<div>📖 Dictionary — <b>{"name":"Sam"}</b></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Python Example</h2></div>
+<div class="code-box">
+<code>
+age = 22<br>
+height = 5.6<br>
+name = "Python"<br>
+is_student = True<br><br>
+print(type(age))<br>
+print(type(height))<br>
+print(type(name))<br>
+print(type(is_student))
+</code>
+</div>
+<button class="run-demo" onclick="showDataTypeDemo()">▶ Run Example</button>
+<div id="variable-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Mini Exercise</h2></div>
+<p>Create variables for:</p>
+<div class="task">1. Your age<br>2. Your height<br>3. Your name<br>4. Whether you are a student</div>
+<textarea id="answer" placeholder="Write your Python code here..."></textarea>
+<button class="check-btn" onclick="checkDataExercise()">Check Answer ✓</button>
+<div id="exercise-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+<p><strong>Which data type is used for text?</strong></p>
+<div class="quiz-options">
+<button onclick="dataQuiz(this,false)">int</button>
+<button onclick="dataQuiz(this,true)">str</button>
+<button onclick="dataQuiz(this,false)">float</button>
+</div>
+<div id="quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="variables.html" class="back-btn">← Variables</a>
+<a href="#" class="next-btn">Input & Output →</a>
+</div>
+</main>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

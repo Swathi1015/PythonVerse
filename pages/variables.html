@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Variables | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">📦</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Variables</h1>
+<p>Learn how Python stores and works with information.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>💡</span>
+<h2>What is a Variable?</h2>
+</div>
+
+<p>A variable is a name used to store a value in a Python program. Think of it like a labelled box where you can keep information and use it later.</p>
+
+<div class="visual-box">
+<div class="box-label">age</div>
+<div class="box-value">22</div>
+<div class="arrow">⬇️</div>
+<div class="memory">🧠 Python Memory</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>🧠</span>
+<h2>Real-Life Example</h2>
+</div>
+
+<p>Imagine a box labelled <strong>Age</strong>. If you put the number <strong>22</strong> inside it, you can later use that value whenever you need it.</p>
+
+<div class="example-row">
+<div class="example-item">📦<strong>Box Name</strong><span>age</span></div>
+<div class="example-arrow">➡️</div>
+<div class="example-item">🔢<strong>Stored Value</strong><span>22</span></div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>💻</span>
+<h2>Python Syntax</h2>
+</div>
+
+<div class="code-box">
+<code>
+name = "Swathi"<br>
+age = 22<br>
+course = "Python"
+</code>
+</div>
+
+<button class="run-demo" onclick="showVariableDemo()">▶ Run Example</button>
+
+<div id="variable-output" class="output-box">
+Output will appear here...
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title">
+<span>📌</span>
+<h2>Important Rules</h2>
+</div>
+
+<div class="rules">
+<div>✅ Variable names can contain letters, numbers and underscore.</div>
+<div>✅ A variable name cannot start with a number.</div>
+<div>✅ Python is case-sensitive.</div>
+<div>✅ Use meaningful names whenever possible.</div>
+</div>
+</section>
+
+<section class="learning-card exercise-card">
+<div class="section-title">
+<span>🎯</span>
+<h2>Your Exercise</h2>
+</div>
+
+<p>Create three variables:</p>
+
+<div class="task">
+1. Your name<br>
+2. Your age<br>
+3. Your favourite programming language
+</div>
+
+<textarea id="answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkExercise()">Check Answer ✓</button>
+
+<div id="exercise-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title">
+<span>🧩</span>
+<h2>Quick Quiz</h2>
+</div>
+
+<p><strong>Which one is a valid Python variable?</strong></p>
+
+<div class="quiz-options">
+<button onclick="quizAnswer(this,false)">1name = "Python"</button>
+<button onclick="quizAnswer(this,true)">name1 = "Python"</button>
+<button onclick="quizAnswer(this,false)">class = "Python"</button>
+</div>
+
+<div id="quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="../roadmap.html" class="back-btn">← Roadmap</a>
+<a href="#" class="next-btn">Next Topic →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sets | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">🧩</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Sets</h1>
+<p>Learn how to store unique values and perform set operations.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is a Set?</h2></div>
+<p>A set is an unordered collection of unique elements. A set automatically removes duplicate values.</p>
+
+<div class="code-box">
+<code>
+numbers = {10,20,30,20,10}<br><br>
+print(numbers)
+</code>
+</div>
+
+<p style="margin-top:20px;">Output will contain only <strong>unique values</strong>.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>⭐</span><h2>Important Properties</h2></div>
+
+<div class="use-grid">
+<div>🚫 <strong>No Duplicates</strong><br>Duplicate values are removed</div>
+<div>🔀 <strong>Unordered</strong><br>No fixed index positions</div>
+<div>✏️ <strong>Mutable</strong><br>Elements can be added or removed</div>
+<div>⚡ <strong>Fast Membership</strong><br>Useful for checking values</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>➕</span><h2>Adding Elements</h2></div>
+
+<p>Use <strong>add()</strong> to add an element to a set.</p>
+
+<div class="code-box">
+<code>
+fruits = {"Apple","Banana"}<br><br>
+fruits.add("Mango")<br>
+print(fruits)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🗑️</span><h2>Removing Elements</h2></div>
+
+<p>You can use <strong>remove()</strong> or <strong>discard()</strong>.</p>
+
+<div class="code-box">
+<code>
+fruits = {"Apple","Banana","Mango"}<br><br>
+fruits.remove("Banana")<br>
+print(fruits)
+</code>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔗</span><h2>Set Operations</h2></div>
+
+<div class="code-box">
+<code>
+A = {1,2,3}<br>
+B = {3,4,5}<br><br>
+print(A | B)  # Union<br>
+print(A &amp; B)  # Intersection<br>
+print(A - B)  # Difference
+</code>
+</div>
+
+<p style="margin-top:20px;"><strong>Union</strong> combines sets. <strong>Intersection</strong> finds common values. <strong>Difference</strong> finds values present only in the first set.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Real-Time Example</h2></div>
+
+<p>Suppose two classes have students and we want to find common students.</p>
+
+<div class="code-box">
+<code>
+class_a = {"Asha","Ravi","Kiran"}<br>
+class_b = {"Ravi","Kiran","Priya"}<br><br>
+common = class_a &amp; class_b<br>
+print(common)
+</code>
+</div>
+
+<button class="run-demo" onclick="showSetDemo()">▶ Run Example</button>
+<div id="set-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create two sets and perform these operations:</p>
+
+<div class="task">
+1. Create two sets containing numbers.<br>
+2. Find their union.<br>
+3. Find their intersection.<br>
+4. Find their difference.<br>
+5. Add a new element using add().
+</div>
+
+<textarea id="set-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkSetExercise()">Check Answer ✓</button>
+<div id="set-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which method is used to add an element to a set?</strong></p>
+
+<div class="quiz-options">
+<button onclick="setQuiz(this,false)">append()</button>
+<button onclick="setQuiz(this,true)">add()</button>
+<button onclick="setQuiz(this,false)">insert()</button>
+</div>
+
+<div id="set-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="tuples.html" class="back-btn">← Tuples</a>
+<a href="dictionaries.html" class="next-btn">Dictionaries →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

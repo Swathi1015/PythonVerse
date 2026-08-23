@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Lists | For You Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="topic-bg">
+<div class="topic-orb orb1"></div>
+<div class="topic-orb orb2"></div>
+</div>
+
+<header>
+<div class="logo">🐍 For You Python</div>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../roadmap.html">Roadmap</a>
+</nav>
+</header>
+
+<main class="topic-page">
+
+<section class="topic-hero">
+<div class="topic-icon">📚</div>
+<span class="topic-level">🌱 BEGINNER</span>
+<h1>Python Lists</h1>
+<p>Learn how to store and manage multiple values in a single variable.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💡</span><h2>What is a List?</h2></div>
+<p>A list is an ordered collection of items. Lists can store multiple values and can contain different data types.</p>
+
+<div class="code-box">
+<code>
+fruits = ["Apple","Banana","Mango"]<br><br>
+print(fruits)
+</code>
+</div>
+
+<p style="margin-top:20px;">Lists are created using <strong>[ ]</strong> square brackets.</p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🔢</span><h2>List Indexing</h2></div>
+<p>Like strings, list items have indexes starting from <strong>0</strong>.</p>
+
+<div class="code-box">
+<code>
+fruits = ["Apple","Banana","Mango"]<br><br>
+print(fruits[0])<br>
+print(fruits[1])<br>
+print(fruits[-1])
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>Apple, Banana, Mango</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>✏️</span><h2>Changing List Items</h2></div>
+<p>Lists are <strong>mutable</strong>, which means their values can be changed.</p>
+
+<div class="code-box">
+<code>
+fruits = ["Apple","Banana","Mango"]<br>
+fruits[1] = "Orange"<br><br>
+print(fruits)
+</code>
+</div>
+
+<p style="margin-top:20px;">Output: <strong>["Apple", "Orange", "Mango"]</strong></p>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🛠️</span><h2>Important List Methods</h2></div>
+
+<div class="use-grid">
+<div>➕ <strong>append()</strong><br>Add item at the end</div>
+<div>📍 <strong>insert()</strong><br>Add item at a position</div>
+<div>❌ <strong>remove()</strong><br>Remove an item</div>
+<div>🗑️ <strong>pop()</strong><br>Remove by index</div>
+<div>🔢 <strong>sort()</strong><br>Sort the list</div>
+<div>🔄 <strong>reverse()</strong><br>Reverse the list</div>
+<div>📏 <strong>len()</strong><br>Find number of items</div>
+<div>🔎 <strong>index()</strong><br>Find item position</div>
+</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>💻</span><h2>Python Example</h2></div>
+
+<div class="code-box">
+<code>
+fruits = ["Apple","Banana"]<br><br>
+fruits.append("Mango")<br>
+fruits.insert(1,"Orange")<br>
+fruits.remove("Banana")<br><br>
+print(fruits)<br>
+print(len(fruits))
+</code>
+</div>
+
+<button class="run-demo" onclick="showListDemo()">▶ Run Example</button>
+<div id="list-output" class="output-box">Output will appear here...</div>
+</section>
+
+<section class="learning-card">
+<div class="section-title"><span>🎯</span><h2>Practice Exercise</h2></div>
+
+<p>Create a list called <strong>students</strong> containing three names and perform these operations:</p>
+
+<div class="task">
+1. Add one more name using append().<br>
+2. Change the first name.<br>
+3. Remove one name.<br>
+4. Print the final list.<br>
+5. Find the length of the list.
+</div>
+
+<textarea id="list-answer" placeholder="Write your Python code here..."></textarea>
+
+<button class="check-btn" onclick="checkListExercise()">Check Answer ✓</button>
+<div id="list-result"></div>
+</section>
+
+<section class="learning-card quiz-card">
+<div class="section-title"><span>🧩</span><h2>Quick Quiz</h2></div>
+
+<p><strong>Which method adds an item to the end of a list?</strong></p>
+
+<div class="quiz-options">
+<button onclick="listQuiz(this,true)">append()</button>
+<button onclick="listQuiz(this,false)">remove()</button>
+<button onclick="listQuiz(this,false)">sort()</button>
+</div>
+
+<div id="list-quiz-result"></div>
+</section>
+
+<div class="topic-navigation">
+<a href="strings.html" class="back-btn">← Strings</a>
+<a href="tuples.html" class="next-btn">Tuples →</a>
+</div>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
